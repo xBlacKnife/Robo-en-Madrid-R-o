@@ -32,14 +32,435 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </player>
-  <scene id="SceneId" hideInventory="no" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <character id="Margarita">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: InicioHablarConMargarita</documentation>
+        <effect>
+          <trigger-conversation idTarget="InicioHablarConMargarita" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <character id="SeñorConPerro">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: HablaConSeñorConPerro</documentation>
+        <effect>
+          <trigger-conversation idTarget="HablarConSeñorConPerro" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <character id="Niño">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: HablarConNiño</documentation>
+        <effect>
+          <trigger-conversation idTarget="HablarConNiño" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <character id="Niña">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: HablarConNiña</documentation>
+        <effect>
+          <trigger-conversation idTarget="HablarConNiña" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <character id="Narrador">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <map-scene id="MapScene" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.3873999035285 -3.70687723159791 0.00987099050250606 0.014419555664051" center="(40.389835088209, -3.69960576295854)" zoom="19" start="yes">
+    <map-element targetId="CentroComercial" layer="0" scale="1" orientation="2">
+      <condition />
+    </map-element>
+  </map-scene>
+  <geoelement id="CentroComercial">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="20">
+        <Polygon>
+          <exterior>
+            <LinearRing>
+              <posList>40.3923069784437 -3.70188832283045 40.3914489819033 -3.70313286781335 40.3898065005432 -3.70123386383084 40.3903539987809 -3.70016098022486</posList>
+            </LinearRing>
+          </exterior>
+        </Polygon>
+      </geometry>
+    </geometries>
+    <actions>
+      <enter-action>
+        <effect>
+          <trigger-scene idTarget="PlazaRio" x="137" y="137" transitionTime="500" transitionType="2" />
+          <condition />
+        </effect>
+        <only-from-outside>True</only-from-outside>
+      </enter-action>
+    </actions>
+  </geoelement>
+  <scene id="PlazaRio" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/special/EmptyBackground.png" />
+      <asset type="background" uri="assets/background/PlazaRio2.jpg" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
   </scene>
+  <graph-conversation id="LlevaraInicio">
+    <dialogue-node nodeindex="0" editor-x="281" editor-y="70">
+      <speak-player>Hemos quedado en ** y ya llego tarde, debería darme prisa.</speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="InicioAutomatico">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>Pues parece que no han llegado aún.</speak-player>
+      <condition />
+      <speak-char idTarget="Margarita">#! ¡Ay, Dios mío! Que me lo han robado, ¿y ahora qué hago yo? Que tengo que ir a recoger a los niños…</speak-char>
+      <condition />
+      <speak-char idTarget="Margarita">Oye, bonito, ¿puedes ayudarme?</speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" showUserOption="yes" editor-x="555" editor-y="50" x="555" y="50">
+      <speak-player>Lo siento, señora, ahora no tengo tiempo.</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>¿Qué le ha pasado?</speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="30" editor-y="383">
+      <speak-char idTarget="Margarita">Pero, ¿cómo no vas a tener tiempo para ayudar a una pobre ancianita a la que han robado?</speak-char>
+      <condition />
+      <speak-char idTarget="Margarita">Estos jóvenes, siempre con prisa, anda, mira a ver si ves quién me ha quitado el bolso.</speak-char>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="688" editor-y="371">
+      <speak-char idTarget="Margarita">#! ¡Ay, que me han robado el bolso!</speak-char>
+      <condition />
+      <speak-char idTarget="Margarita">Mira a ver si lo ves por ahí, bonito, anda, corre, corre, que tengo que ir a buscar a los niños y darles la merienda, que la otra me los tiene muertos de hambre.</speak-char>
+      <condition />
+      <speak-char idTarget="Margarita">Tengo un tapper lleno de cocretas para chuparse los dedos. Anda, si lo encuentras, te doy una, bonito.</speak-char>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="284" editor-y="688">
+      <speak-player>¿No lo habrá perdido?</speak-player>
+      <condition />
+      <speak-char idTarget="Margarita">¡Huy, no! Yo no pierdo nada, bonito.</speak-char>
+      <condition />
+      <speak-char idTarget="Margarita">¡Ay! Esos de ahí son mis pañuelos, el ladrón debe haber ido **.</speak-char>
+      <condition />
+      <speak-char idTarget="Margarita">Voy contigo, no vaya a ser que me lo robes tú también, que no me fío yo de vosotros un pelo.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="InicioHablarConMargarita">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>¿Tan importante es lo que tenía en el bolso? </speak-player>
+      <condition />
+      <speak-char idTarget="Margarita">¡Huy, no! Lo que más me importan son las cocretas.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="HablarConSeñorConPerro">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>Oiga, esta señora dice que le han robado el bolso, ¿no lo habrá visto por aquí?</speak-player>
+      <condition />
+      <speak-char idTarget="SeñorConPerro">Pues he visto uno de éstos, negro, con un bolso **, ha ido por **.</speak-char>
+      <condition />
+      <speak-char idTarget="Margarita">¿Un negro? ¡Ay, ay, ay! Va a haber que llamar a la policía, si lo sabía yo, que en este barrio…</speak-char>
+      <condition />
+      <speak-char idTarget="Margarita">Ay, mis niños, que se quedan sin su merienda hoy…</speak-char>
+      <condition />
+      <speak-char idTarget="Margarita">#! ¡Vamos, corre, corre!</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="SalirDespuesDeConverSeñorConPerro">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>Pero señora...</speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="HablarConNiño">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>Hola, ¿has visto alguien corriendo por aquí con un bolso **?</speak-player>
+      <condition />
+      <speak-player>Esta señora dice que se lo han llevado. </speak-player>
+      <condition />
+      <speak-char idTarget="Margarita">Era negro.</speak-char>
+      <condition />
+      <speak-char idTarget="Niño">No, pero he visto a uno marrón con gorra, corría y llevaba un tapper en la boca.</speak-char>
+      <condition />
+      <speak-player>¿Por dónde ha ido?</speak-player>
+      <condition />
+      <speak-char idTarget="Niño">
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Margarita">¿Con gorra? Ay, seguro que es gitano, ya verás tú, que nos metemos en una pelea de bandas, con esta gente no se puede vivir…</speak-char>
+      <condition />
+      <speak-char idTarget="Margarita">Ah, no, no, no… Pues mis niños van a merendar hoy sí o sí, ya verás tú cuando les pille. </speak-char>
+      <condition />
+      <speak-char idTarget="Niño">¿Gitano?</speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="MapScene" x="137" y="137" transitionTime="750" transitionType="1" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="HablarConNiña">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>Hola, ¿has visto por aquí a alguien corriendo con un tapper o un bolso? </speak-player>
+      <condition />
+      <speak-char idTarget="Niña">¡Huy, sí, y era muy bonito! Pero cuando le he ido a acariciar, ha salido corriendo.</speak-char>
+      <condition />
+      <speak-char idTarget="Margarita">#! ¿¡A acariciar!?</speak-char>
+      <condition />
+      <speak-player>¿Y por dónde ha ido?</speak-player>
+      <condition />
+      <speak-char idTarget="Niña">Creo que **.</speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="MapScene" x="137" y="137" transitionTime="750" transitionType="1" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="EleccionEntrePerrosYPersonas">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" showUserOption="yes" editor-x="792" editor-y="50" x="792" y="50">
+      <speak-player>Tiene razón, señora, vayamos a reclamarles sus cosas.</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>Creo que esa comida es suya, señora… Y ahí hay un perro marrón y otro negro, igual han sido ellos.</speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="88" editor-y="298">
+      <speak-char idTarget="Narrador">#O Te has dejado llevar por los prejuicios y has acusado injustamente a una familia que solo ha ido a pasar el domingo al parque. </speak-char>
+      <condition />
+      <speak-char idTarget="Narrador">#O La madre os ha regañado y avergonzado delante de todos los que estaban en el parque.</speak-char>
+      <condition />
+      <speak-char idTarget="Narrador">Te has quedado sin croqueta.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="755" editor-y="353">
+      <speak-char idTarget="Narrador">#O Tienes razón, te has acercado a los perros y has visto que tenían el tapper y el bolso de la señora.</speak-char>
+      <condition />
+      <speak-char idTarget="Narrador">#O Estaban intentando comerse las croquetas de sus nietos.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="RecogerCroqueta">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="Margarita">Es que el otro día, fíjate tú, salieron del cole y solo habían comido dos platos de sopa, uno de puré, tres filetes de pollo, uno de ternera, un plátano y un yogur…</speak-char>
+      <condition />
+      <speak-char idTarget="Margarita">Muertitos de hambre me los tenían.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ComentarioDesvio1">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="Margarita">Oye, bonito, ¿a dónde quieres llevarme? No ha dicho por ese lado, ha dicho **.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ComentarioDesvio2">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="Margarita">Ay, que mis nietos salen en 10 minutos, hay que darse prisa ¿y si me los secuestran por llegar tarde? </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ComentarioDesvio3">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="Margarita">Por ahí no es… Al final, llegamos tarde y se me enfrían las croquetas, ya verás tú…</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
 </eAdventure>
