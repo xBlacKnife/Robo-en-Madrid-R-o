@@ -35,7 +35,7 @@
   <character id="Margarita">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/margarita.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -49,9 +49,9 @@
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
-    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
-      <frontcolor color="#FFFFFF" />
-      <bordercolor color="#000000" />
+    <textcolor showsSpeechBubble="yes" bubbleBkgColor="#FFDFD3" bubbleBorderColor="#FFA381">
+      <frontcolor color="#000000" />
+      <bordercolor color="#FFDFD3" />
     </textcolor>
     <description>
       <name>
@@ -64,7 +64,6 @@
     <voice name="" synthesizeAlways="no" />
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: InicioHablarConMargarita</documentation>
         <effect>
           <trigger-conversation idTarget="InicioHablarConMargarita" />
           <condition />
@@ -72,10 +71,10 @@
       </talk-to>
     </actions>
   </character>
-  <character id="SeñorConPerro">
-    <resources name="No name">
+  <character id="Pedro">
+    <resources name="">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/senorconperro.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -89,9 +88,9 @@
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
-    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
-      <frontcolor color="#FFFFFF" />
-      <bordercolor color="#000000" />
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FF4A4A" bubbleBorderColor="#8C0000">
+      <frontcolor color="#000000" />
+      <bordercolor color="#FF4A4A" />
     </textcolor>
     <description>
       <name>
@@ -104,15 +103,14 @@
     <voice name="" synthesizeAlways="no" />
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: HablaConSeñorConPerro</documentation>
         <effect>
-          <trigger-conversation idTarget="HablarConSeñorConPerro" />
+          <trigger-conversation idTarget="HablarConPedro" />
           <condition />
         </effect>
       </talk-to>
     </actions>
   </character>
-  <character id="Niño">
+  <character id="Johnny">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
       <asset type="standdown" uri="assets/special/EmptyAnimation" />
@@ -129,9 +127,9 @@
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
-    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#8A74FF" bubbleBorderColor="#5343A5">
       <frontcolor color="#FFFFFF" />
-      <bordercolor color="#000000" />
+      <bordercolor color="#8A74FF" />
     </textcolor>
     <description>
       <name>
@@ -144,15 +142,14 @@
     <voice name="" synthesizeAlways="no" />
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: HablarConNiño</documentation>
         <effect>
-          <trigger-conversation idTarget="HablarConNiño" />
+          <trigger-conversation idTarget="HablarConJohnny" />
           <condition />
         </effect>
       </talk-to>
     </actions>
   </character>
-  <character id="Niña">
+  <character id="Lolita">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
       <asset type="standdown" uri="assets/special/EmptyAnimation" />
@@ -169,9 +166,9 @@
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
-    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
-      <frontcolor color="#FFFFFF" />
-      <bordercolor color="#000000" />
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#50A5A5" bubbleBorderColor="#316565">
+      <frontcolor color="#000000" />
+      <bordercolor color="#50A5A5" />
     </textcolor>
     <description>
       <name>
@@ -184,9 +181,8 @@
     <voice name="" synthesizeAlways="no" />
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: HablarConNiña</documentation>
         <effect>
-          <trigger-conversation idTarget="HablarConNiña" />
+          <trigger-conversation idTarget="HablarConLolita" />
           <condition />
         </effect>
       </talk-to>
@@ -209,9 +205,9 @@
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
-    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
-      <frontcolor color="#FFFFFF" />
-      <bordercolor color="#000000" />
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#418555" bubbleBorderColor="#21412A">
+      <frontcolor color="#000000" />
+      <bordercolor color="#418555" />
     </textcolor>
     <description>
       <name>
@@ -223,12 +219,112 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </character>
-  <map-scene id="MapScene" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.3873999035285 -3.70687723159791 0.00987099050250606 0.014419555664051" center="(40.389835088209, -3.69960576295854)" zoom="19" start="yes">
-    <map-element targetId="CentroComercial" layer="0" scale="1" orientation="2">
+  <map-scene id="MapScene" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.3873999035285 -3.70687723159791 0.00987099050250606 0.014419555664051" center="(40.390705874787, -3.69809299707408)" zoom="19" start="no">
+    <map-element targetId="GeoInicio" layer="0" scale="1" orientation="2">
+      <condition>
+        <inactive flag="inicioFinalizado" />
+      </condition>
+    </map-element>
+    <map-element targetId="GeoPedro" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="inicioFinalizado" />
+        <inactive flag="pedroFinalizado" />
+      </condition>
+    </map-element>
+    <map-element targetId="Geo_Pastillero_Bingo" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="pedroFinalizado" />
+      </condition>
+    </map-element>
+    <map-element targetId="Pastillero" layer="0" scale="0.1271972" orientation="2">
+      <condition>
+        <active flag="pedroFinalizado" />
+      </condition>
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.3918037414551, -3.6999626159668)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">40</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="CartonBingo" layer="0" scale="0.207748" orientation="2">
+      <condition>
+        <active flag="pedroFinalizado" />
+      </condition>
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.3919982910156, -3.69930791854858)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">40</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="Margarita" layer="0" scale="0.393699" orientation="2">
       <condition />
+      <ext-elem-ref transformManager="uAdventure.Geo.ScreenDescriptor">
+        <param name="Position">(42.8, 578.2)</param>
+        <param name="Rotation">0</param>
+      </ext-elem-ref>
     </map-element>
   </map-scene>
-  <geoelement id="CentroComercial">
+  <geoelement id="GeoInicio">
+    <description>
+      <name>Inicio</name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="40">
+        <Point>
+          <pos>40.3903675231919 -3.69943879544742</pos>
+        </Point>
+      </geometry>
+    </geometries>
+    <actions>
+      <enter-action>
+        <effect>
+          <trigger-scene idTarget="SceneInicio" x="400" y="450" transitionTime="750" transitionType="5" />
+          <condition />
+          <trigger-conversation idTarget="InicioAutomatico" />
+          <condition />
+          <activate flag="inicioFinalizado" />
+          <condition />
+        </effect>
+        <only-from-outside>True</only-from-outside>
+      </enter-action>
+    </actions>
+  </geoelement>
+  <geoelement id="GeoPedro">
+    <description>
+      <name>Pedro</name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="40">
+        <Point>
+          <pos>40.3915120794559 -3.69714081287378</pos>
+        </Point>
+      </geometry>
+    </geometries>
+    <actions>
+      <enter-action>
+        <effect>
+          <trigger-scene idTarget="ScenePedro" x="137" y="137" transitionTime="750" transitionType="5" />
+          <condition />
+          <activate flag="pedroFinalizado" />
+          <condition />
+        </effect>
+        <only-from-outside>True</only-from-outside>
+      </enter-action>
+    </actions>
+  </geoelement>
+  <geoelement id="Geo_Pastillero_Bingo">
     <description>
       <name>
       </name>
@@ -238,31 +334,135 @@
       </detailed>
     </description>
     <geometries>
-      <geometry influence="20">
-        <Polygon>
-          <exterior>
-            <LinearRing>
-              <posList>40.3923069784437 -3.70188832283045 40.3914489819033 -3.70313286781335 40.3898065005432 -3.70123386383084 40.3903539987809 -3.70016098022486</posList>
-            </LinearRing>
-          </exterior>
-        </Polygon>
+      <geometry influence="100">
+        <Point>
+          <pos>40.3919305743337 -3.69962453842172</pos>
+        </Point>
       </geometry>
     </geometries>
-    <actions>
-      <enter-action>
-        <effect>
-          <trigger-scene idTarget="PlazaRio" x="137" y="137" transitionTime="500" transitionType="2" />
-          <condition />
-        </effect>
-        <only-from-outside>True</only-from-outside>
-      </enter-action>
-    </actions>
+    <actions />
   </geoelement>
-  <scene id="PlazaRio" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="SceneMenu" hideInventory="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/special/EmptyBackground.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="23" y="9" width="761" height="573" hasInfluenceArea="no" idTarget="MapScene" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <trigger-conversation idTarget="LlevaraInicio" />
+          <condition />
+          <navigate navigation-type="Ordered">
+            <step locks="False">GeoInicio</step>
+          </navigate>
+          <condition />
+        </post-effect>
+      </exit>
+    </exits>
+  </scene>
+  <scene id="SceneInicio" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
       <asset type="background" uri="assets/background/PlazaRio2.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="254" y="6" width="16" height="16" hasInfluenceArea="no" idTarget="MapScene" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <navigate navigation-type="Ordered">
+            <step locks="False">GeoPedro</step>
+          </navigate>
+          <condition />
+        </post-effect>
+      </exit>
+    </exits>
+    <objects>
+      <object-ref idTarget="ExitButton" x="262" y="21" scale="0.02" layer="0" hasInfluenceArea="no" />
+    </objects>
+    <characters>
+      <character-ref idTarget="Margarita" x="225" y="166" scale="0.3713193" orientation="2" layer="1" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="ScenePedro" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/PlazaRio2.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="252" y="4" width="20" height="20" hasInfluenceArea="no" idTarget="MapScene" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <effect>
+          <trigger-conversation idTarget="SalirDespuesDeConverPedro" />
+          <condition />
+        </effect>
+      </exit>
+    </exits>
+    <objects>
+      <object-ref idTarget="ExitButton" x="262" y="21" scale="0.02" layer="0" hasInfluenceArea="no" />
+    </objects>
+    <characters>
+      <character-ref idTarget="Pedro" x="203" y="166" scale="0.3" orientation="2" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="Margarita" x="146" y="339" scale="0.5910853" orientation="2" layer="1" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="SceneJohnny" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/special/EmptyBackground.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
+  <scene id="SceneLolita" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/special/EmptyBackground.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
+  <scene id="SceneFinalPerretes" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/special/EmptyBackground.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
+  <scene id="SceneFinalFamilia" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/special/EmptyBackground.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
+  <scene id="SceneFinalVacio" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/special/EmptyBackground.png" />
     </resources>
     <name>
     </name>
@@ -285,7 +485,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" showUserOption="yes" editor-x="555" editor-y="50" x="555" y="50">
+    <option-node nodeindex="1" showUserOption="yes" preListening="yes" editor-x="555" editor-y="50" x="555" y="50">
       <speak-player>Lo siento, señora, ahora no tengo tiempo.</speak-player>
       <condition />
       <child nodeindex="2" />
@@ -330,11 +530,11 @@
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="HablarConSeñorConPerro">
+  <graph-conversation id="HablarConPedro">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-player>Oiga, esta señora dice que le han robado el bolso, ¿no lo habrá visto por aquí?</speak-player>
       <condition />
-      <speak-char idTarget="SeñorConPerro">Pues he visto uno de éstos, negro, con un bolso **, ha ido por **.</speak-char>
+      <speak-char idTarget="Pedro">Pues he visto uno de éstos, negro, con un bolso **, ha ido por **.</speak-char>
       <condition />
       <speak-char idTarget="Margarita">¿Un negro? ¡Ay, ay, ay! Va a haber que llamar a la policía, si lo sabía yo, que en este barrio…</speak-char>
       <condition />
@@ -345,14 +545,14 @@
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="SalirDespuesDeConverSeñorConPerro">
+  <graph-conversation id="SalirDespuesDeConverPedro">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-player>Pero señora...</speak-player>
       <condition />
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="HablarConNiño">
+  <graph-conversation id="HablarConJohnny">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-player>Hola, ¿has visto alguien corriendo por aquí con un bolso **?</speak-player>
       <condition />
@@ -360,18 +560,18 @@
       <condition />
       <speak-char idTarget="Margarita">Era negro.</speak-char>
       <condition />
-      <speak-char idTarget="Niño">No, pero he visto a uno marrón con gorra, corría y llevaba un tapper en la boca.</speak-char>
+      <speak-char idTarget="Johnny">No, pero he visto a uno marrón con gorra, corría y llevaba un tapper en la boca.</speak-char>
       <condition />
       <speak-player>¿Por dónde ha ido?</speak-player>
       <condition />
-      <speak-char idTarget="Niño">
+      <speak-char idTarget="Johnny">
       </speak-char>
       <condition />
       <speak-char idTarget="Margarita">¿Con gorra? Ay, seguro que es gitano, ya verás tú, que nos metemos en una pelea de bandas, con esta gente no se puede vivir…</speak-char>
       <condition />
       <speak-char idTarget="Margarita">Ah, no, no, no… Pues mis niños van a merendar hoy sí o sí, ya verás tú cuando les pille. </speak-char>
       <condition />
-      <speak-char idTarget="Niño">¿Gitano?</speak-char>
+      <speak-char idTarget="Johnny">¿Gitano?</speak-char>
       <condition />
       <end-conversation>
         <effect>
@@ -381,17 +581,17 @@
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="HablarConNiña">
+  <graph-conversation id="HablarConLolita">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-player>Hola, ¿has visto por aquí a alguien corriendo con un tapper o un bolso? </speak-player>
       <condition />
-      <speak-char idTarget="Niña">¡Huy, sí, y era muy bonito! Pero cuando le he ido a acariciar, ha salido corriendo.</speak-char>
+      <speak-char idTarget="Lolita">¡Huy, sí, y era muy bonito! Pero cuando le he ido a acariciar, ha salido corriendo.</speak-char>
       <condition />
       <speak-char idTarget="Margarita">#! ¿¡A acariciar!?</speak-char>
       <condition />
       <speak-player>¿Y por dónde ha ido?</speak-player>
       <condition />
-      <speak-char idTarget="Niña">Creo que **.</speak-char>
+      <speak-char idTarget="Lolita">Creo que **.</speak-char>
       <condition />
       <end-conversation>
         <effect>
@@ -408,7 +608,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" showUserOption="yes" editor-x="792" editor-y="50" x="792" y="50">
+    <option-node nodeindex="1" showUserOption="yes" preListening="yes" editor-x="792" editor-y="50" x="792" y="50">
       <speak-player>Tiene razón, señora, vayamos a reclamarles sus cosas.</speak-player>
       <condition />
       <child nodeindex="2" />
@@ -463,4 +663,88 @@
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
+  <graph-conversation id="CogerPastillero">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>Anda, un pastillero médico ¿Es suyo?</speak-player>
+      <condition />
+      <speak-char idTarget="Margarita">Sí, sí, mías todas. Entre la cabeza, la espalda y el corazón me tienen loca con tanta pastilla.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="CogerBingo">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>¿Un cartón del Bingo? ¿Aquí?</speak-player>
+      <condition />
+      <speak-char idTarget="Margarita">¡Ay, sí! Es mi cartoncillo de la suerte, que lo froto asín y me da buena fortuna para toa la semana.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <object id="ExitButton" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/exitButton.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="Pastillero" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/pastillero.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <remove-element idTarget="Pastillero" />
+          <condition />
+          <activate flag="pastilleroRecogido" />
+          <condition />
+          <trigger-conversation idTarget="CogerPastillero" />
+          <condition />
+        </effect>
+      </grab>
+    </actions>
+  </object>
+  <object id="CartonBingo" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/carton bingo.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <remove-element idTarget="CartonBingo" />
+          <condition />
+          <activate flag="bingoRecogido" />
+          <condition />
+          <trigger-conversation idTarget="CogerBingo" />
+          <condition />
+        </effect>
+      </grab>
+    </actions>
+  </object>
 </eAdventure>
