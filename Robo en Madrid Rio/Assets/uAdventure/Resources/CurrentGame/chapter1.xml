@@ -219,11 +219,20 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </character>
-  <map-scene id="MapScene" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.3873999035285 -3.70687723159791 0.00987099050250606 0.014419555664051" center="(40.390705874787, -3.69809299707408)" zoom="19" start="no">
+  <map-scene id="MapScene" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.3873999035285 -3.70687723159791 0.00987099050250606 0.014419555664051" center="(40.3916496819103, -3.69794011116017)" zoom="19" start="no">
     <map-element targetId="GeoInicio" layer="0" scale="1" orientation="2">
       <condition>
         <inactive flag="inicioFinalizado" />
       </condition>
+    </map-element>
+    <map-element targetId="Margarita" layer="0" scale="0.393699" orientation="2">
+      <condition>
+        <active flag="inicioFinalizado" />
+      </condition>
+      <ext-elem-ref transformManager="uAdventure.Geo.ScreenDescriptor">
+        <param name="Position">(42.8, 578.2)</param>
+        <param name="Rotation">0</param>
+      </ext-elem-ref>
     </map-element>
     <map-element targetId="GeoPedro" layer="0" scale="1" orientation="2">
       <condition>
@@ -231,17 +240,12 @@
         <inactive flag="pedroFinalizado" />
       </condition>
     </map-element>
-    <map-element targetId="Geo_Pastillero_Bingo" layer="0" scale="1" orientation="2">
-      <condition>
-        <active flag="pedroFinalizado" />
-      </condition>
-    </map-element>
     <map-element targetId="Pastillero" layer="0" scale="0.1271972" orientation="2">
       <condition>
         <active flag="pedroFinalizado" />
       </condition>
       <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.3918037414551, -3.6999626159668)</param>
+        <param name="Position">(40.3918952941895, -3.699214220047)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">40</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -253,19 +257,35 @@
         <active flag="pedroFinalizado" />
       </condition>
       <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.3919982910156, -3.69930791854858)</param>
+        <param name="Position">(40.3924865722656, -3.69792675971985)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">40</param>
         <param name="RevealOnlyOnRange">True</param>
         <param name="RevealParticleTexture">leaf_particle.png</param>
       </ext-elem-ref>
     </map-element>
-    <map-element targetId="Margarita" layer="0" scale="0.393699" orientation="2">
-      <condition />
-      <ext-elem-ref transformManager="uAdventure.Geo.ScreenDescriptor">
-        <param name="Position">(42.8, 578.2)</param>
-        <param name="Rotation">0</param>
-      </ext-elem-ref>
+    <map-element targetId="GeoPastillero" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="pedroFinalizado" />
+        <inactive flag="pastilleroRecogido" />
+        <inactive flag="bingoRecogido" />
+      </condition>
+    </map-element>
+    <map-element targetId="GeoBingo" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="pedroFinalizado" />
+        <inactive flag="bingoRecogido" />
+        <inactive flag="pastilleroRecogido" />
+      </condition>
+    </map-element>
+    <map-element targetId="GeoBingo_Pastillero" layer="0" scale="1" orientation="2">
+      <condition>
+        <inactive flag="bingo_pastilleroRecogidos" />
+        <either>
+          <active flag="pastilleroRecogido" />
+          <active flag="bingoRecogido" />
+        </either>
+      </condition>
     </map-element>
   </map-scene>
   <geoelement id="GeoInicio">
@@ -324,7 +344,7 @@
       </enter-action>
     </actions>
   </geoelement>
-  <geoelement id="Geo_Pastillero_Bingo">
+  <geoelement id="GeoPastillero">
     <description>
       <name>
       </name>
@@ -334,10 +354,46 @@
       </detailed>
     </description>
     <geometries>
-      <geometry influence="100">
-        <Point>
-          <pos>40.3919305743337 -3.69962453842172</pos>
-        </Point>
+      <geometry influence="20">
+        <LineString>
+          <posList>40.3919185735878 -3.69919538497912 40.3910606427796 -3.6981493234633 40.3913861526811 -3.69763702154145</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <geoelement id="GeoBingo">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="20">
+        <LineString>
+          <posList>40.3924946817807 -3.69790792465191 40.3918981899706 -3.69756460189802</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <geoelement id="GeoBingo_Pastillero">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="20">
+        <LineString>
+          <posList>40.391963634726 -3.69922757148718 40.3925518078797 -3.69791328906988</posList>
+        </LineString>
       </geometry>
     </geometries>
     <actions />
@@ -681,6 +737,117 @@
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
+  <graph-conversation id="CogerCartera">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>Una cartera con fotos de gatetes. Esto suena a abuela por completo.</speak-player>
+      <condition />
+      <speak-char idTarget="Margarita">Eh, mucho ojo con lo que dices. Que todavía soy una moza en espíritu.</speak-char>
+      <condition />
+      <speak-player>La cartera sigue llena de dinero. Qué raro que roben un bolso y se dejen lo importante.</speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="CogerMovil">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>Un Nokia de los antiguos. Estos cacharros son indestructibles.</speak-player>
+      <condition />
+      <speak-char idTarget="Margarita">Me lo dieron mis nietecitos para que me mantuviera en contacto.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="CogerGafas">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>Estas gafas tienen un aspecto muy… vintage, por decirlo de alguna manera. Seguro que son las suyas.</speak-player>
+      <condition />
+      <speak-char idTarget="Margarita">¿Muy vin-qué? Yo no entiendo de esas cosas de modernos, las gafas son para leer y para los crucigramas.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="CogerFotos">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>Un puñado de fotos de unos niños ¿Son suyas?</speak-player>
+      <condition />
+      <speak-player>Ay, ay, ay ¡Las fotos de mis nietecitos! ¿A qué son una monada? Si es que me los comía a besos.</speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="CogerLaca">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>Un bote de laca. ¡El mejor amigo de los flequillos!</speak-player>
+      <condition />
+      <speak-char idTarget="Margarita">¡Y de las señoras de buen gusto!</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="CogerRulos">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>Unos rulos para el pelo. ¡Los mejores amigos de la laca!</speak-player>
+      <condition />
+      <speak-char idTarget="Margarita">No veas lo bien que me quedan los rizos con ellos.</speak-char>
+      <condition />
+      <speak-char idTarget="Margarita">Un ratito con el secador y salgo que ni las famosas de Hollywood.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="CogerPanuelo">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>Este pañuelo parece de señora. Seguramente se haya caído del bolso en la huída.</speak-player>
+      <condition />
+      <speak-char idTarget="Margarita">Yo sin mi pañuelo no salgo nunca de casa, mira tú, no sea que le tenga que limpiar los mofletes a mis nietecitos.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="CogerCollar">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>Los collares de perlas son muy de señora mayor. Es suyo, ¿no?</speak-player>
+      <condition />
+      <speak-char idTarget="Margarita">¡Y tan mío! Regalo de bodas de mi Paco cuando nos casamos en el pueblo.</speak-char>
+      <condition />
+      <speak-player>¿Roban un bolso y dejan las joyas fuera? Aquí hay algo raro…</speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="CogerOvilloLana">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>Un ovillo de lana con agujas. El “fortnite” de las señoras.</speak-player>
+      <condition />
+      <speak-char idTarget="Margarita">Es ponerme con la calceta y te hago un jersey como te saco unos calcetines.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="CogerLlaves">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>Unas llaves aquí, tiradas en el suelo, ¿son las suyas, señora?</speak-player>
+      <condition />
+      <speak-char idTarget="Margarita">Ay sí, sí, sí. Y yo que no sabía cómo iba a entrar en casa, que mi Paco está fuera y no hay nadie en ella.</speak-char>
+      <condition />
+      <speak-char idTarget="Margarita">Qué alegría que me has dado al encontrarlas.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="CogerCroqueta">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>¡Vaya! A alguien se le ha caído una croqueta. Debemos andar cerca de los ladrones.</speak-player>
+      <condition />
+      <speak-char idTarget="Margarita">Mira que tirar una de mis cocretas al suelo ¡Mis cocretas! Qué van a comer ahora mis niños.</speak-char>
+      <condition />
+      <speak-char idTarget="Margarita">Es que el otro día, fíjate tú, salieron del cole y solo habían comido dos platos de sopa, uno de puré, tres filetes de pollo, uno de ternera, un plátano y un yogur…</speak-char>
+      <condition />
+      <speak-char idTarget="Margarita">Muertitos de hambre me los tenían.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
   <object id="ExitButton" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/exitButton.png" />
@@ -715,6 +882,10 @@
           <condition />
           <activate flag="pastilleroRecogido" />
           <condition />
+          <activate flag="bingo_pastilleroRecogidos" />
+          <condition>
+            <active flag="bingoRecogido" />
+          </condition>
           <trigger-conversation idTarget="CogerPastillero" />
           <condition />
         </effect>
@@ -741,7 +912,297 @@
           <condition />
           <activate flag="bingoRecogido" />
           <condition />
+          <activate flag="bingo_pastilleroRecogidos" />
+          <condition>
+            <active flag="pastilleroRecogido" />
+          </condition>
           <trigger-conversation idTarget="CogerBingo" />
+          <condition />
+        </effect>
+      </grab>
+    </actions>
+  </object>
+  <object id="Cartera" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/special/EmptyImage.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <remove-element idTarget="Cartera" />
+          <condition />
+          <activate flag="carteraRecogida" />
+          <condition />
+          <trigger-conversation idTarget="CogerCartera" />
+          <condition />
+        </effect>
+      </grab>
+    </actions>
+  </object>
+  <object id="Movil" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/special/EmptyImage.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <remove-element idTarget="Movil" />
+          <condition />
+          <activate flag="movilRecogido" />
+          <condition />
+          <trigger-conversation idTarget="CogerMovil" />
+          <condition />
+        </effect>
+      </grab>
+    </actions>
+  </object>
+  <object id="Gafas" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/special/EmptyImage.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <remove-element idTarget="Gafas" />
+          <condition />
+          <activate flag="gafasRecogida" />
+          <condition />
+          <trigger-conversation idTarget="CogerGafas" />
+          <condition />
+        </effect>
+      </grab>
+    </actions>
+  </object>
+  <object id="Fotos" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/special/EmptyImage.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <remove-element idTarget="Fotos" />
+          <condition />
+          <activate flag="fotosRecogido" />
+          <condition />
+          <trigger-conversation idTarget="CogerFotos" />
+          <condition />
+        </effect>
+      </grab>
+    </actions>
+  </object>
+  <object id="Laca" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/special/EmptyImage.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <remove-element idTarget="Laca" />
+          <condition />
+          <activate flag="lacaRecogida" />
+          <condition />
+          <trigger-conversation idTarget="CogerLaca" />
+          <condition />
+        </effect>
+      </grab>
+    </actions>
+  </object>
+  <object id="Rulos" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/special/EmptyImage.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <remove-element idTarget="Rulos" />
+          <condition />
+          <activate flag="rulosRecogido" />
+          <condition />
+          <trigger-conversation idTarget="CogerRulos" />
+          <condition />
+        </effect>
+      </grab>
+    </actions>
+  </object>
+  <object id="Panuelo" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/special/EmptyImage.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <remove-element idTarget="Panuelo" />
+          <condition />
+          <activate flag="panueloRecogido" />
+          <condition />
+          <trigger-conversation idTarget="CogerPanuelo" />
+          <condition />
+        </effect>
+      </grab>
+    </actions>
+  </object>
+  <object id="Collar" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/special/EmptyImage.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <remove-element idTarget="Collar" />
+          <condition />
+          <activate flag="collarRecogido" />
+          <condition />
+          <trigger-conversation idTarget="CogerCollar" />
+          <condition />
+        </effect>
+      </grab>
+    </actions>
+  </object>
+  <object id="OvilloLana" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/special/EmptyImage.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <remove-element idTarget="OvilloLana" />
+          <condition />
+          <activate flag="ovilloLanaRecogido" />
+          <condition />
+          <trigger-conversation idTarget="CogerOvilloLana" />
+          <condition />
+        </effect>
+      </grab>
+    </actions>
+  </object>
+  <object id="Llaves" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/special/EmptyImage.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <remove-element idTarget="Llaves" />
+          <condition />
+          <activate flag="llavesRecogida" />
+          <condition />
+          <trigger-conversation idTarget="CogerLlaves" />
+          <condition />
+        </effect>
+      </grab>
+    </actions>
+  </object>
+  <object id="Croqueta" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/special/EmptyImage.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <remove-element idTarget="Croqueta" />
+          <condition />
+          <activate flag="croquetaRecogida" />
+          <condition />
+          <trigger-conversation idTarget="CogerCroqueta" />
           <condition />
         </effect>
       </grab>
