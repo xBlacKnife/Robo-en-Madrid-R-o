@@ -291,8 +291,6 @@
           <condition />
           <activate flag="finalFamilia" />
           <condition />
-          <trigger-scene idTarget="SceneEnding" x="960" y="810" transitionTime="0" transitionType="0" />
-          <condition />
         </effect>
       </talk-to>
     </actions>
@@ -395,8 +393,6 @@
           <trigger-conversation idTarget="CulparPerros" />
           <condition />
           <activate flag="finalPerros" />
-          <condition />
-          <trigger-scene idTarget="SceneEnding" x="960" y="810" transitionTime="0" transitionType="0" />
           <condition />
         </effect>
       </talk-to>
@@ -1542,11 +1538,12 @@
     </geometries>
     <actions />
   </geoelement>
-  <scene id="SceneMenu" hideInventory="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="SceneMenu" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
       <asset type="background" uri="assets/background/menu_inicial_robo_en_madrid_rio.png" />
+      <asset type="bgmusic" uri="assets/audio/Park ambiance.mp3" />
     </resources>
     <name>
     </name>
@@ -1588,6 +1585,8 @@
     </documentation>
     <resources name="No name">
       <asset type="background" uri="assets/background/Inicio.png" />
+      <asset type="bgmusic" uri="assets/audio/Park ambiance.mp3" />
+      <asset type="foreground" uri="" />
     </resources>
     <name>
     </name>
@@ -1615,6 +1614,7 @@
     </documentation>
     <resources name="No name">
       <asset type="background" uri="assets/background/Puente.png" />
+      <asset type="bgmusic" uri="assets/audio/Park ambiance.mp3" />
     </resources>
     <name>
     </name>
@@ -1642,6 +1642,7 @@
     </documentation>
     <resources name="No name">
       <asset type="background" uri="assets/background/Pedro.png" />
+      <asset type="bgmusic" uri="assets/audio/Park ambiance.mp3" />
     </resources>
     <name>
     </name>
@@ -1658,8 +1659,8 @@
       <object-ref idTarget="ExitButton" x="1032" y="71" scale="0.07017157" layer="0" hasInfluenceArea="no" />
     </objects>
     <characters>
-      <character-ref idTarget="Johnny" x="789" y="795" scale="0.4885285" orientation="2" layer="2" hasInfluenceArea="no" />
-      <character-ref idTarget="Margarita" x="247" y="706" scale="0.75102" orientation="2" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Johnny" x="200" y="766" scale="0.5296067" orientation="2" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="Margarita" x="690" y="805" scale="1.57028" orientation="2" layer="1" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="SceneLolita" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -1667,6 +1668,7 @@
     </documentation>
     <resources name="No name">
       <asset type="background" uri="assets/background/Lolita.png" />
+      <asset type="bgmusic" uri="assets/audio/Park ambiance.mp3" />
     </resources>
     <name>
     </name>
@@ -1692,13 +1694,14 @@
     </documentation>
     <resources name="No name">
       <asset type="background" uri="assets/background/perros.png" />
+      <asset type="bgmusic" uri="assets/audio/Park ambiance.mp3" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
       <exit rectangular="yes" x="996" y="30" width="58" height="55" hasInfluenceArea="no" idTarget="MapScene" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+        <exit-look text="" cursor-path="" sound-path="" />
         <post-effect>
           <activate flag="PerrosVisitado" />
           <condition />
@@ -1708,22 +1711,25 @@
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="Tupper" x="141" y="812" scale="0.3" layer="3" hasInfluenceArea="no" />
-      <object-ref idTarget="Croqueta" x="192" y="799" scale="0.1" layer="1" hasInfluenceArea="no" />
-      <object-ref idTarget="Croqueta" x="181" y="787" scale="0.1287465" layer="2" hasInfluenceArea="no" />
-      <object-ref idTarget="ExitButton" x="1025" y="82" scale="0.07" layer="6" hasInfluenceArea="no" />
+      <object-ref idTarget="Tupper" x="141" y="812" scale="0.3" layer="5" hasInfluenceArea="no" />
+      <object-ref idTarget="Croqueta" x="192" y="799" scale="0.1" layer="3" hasInfluenceArea="no" />
+      <object-ref idTarget="Croqueta" x="181" y="787" scale="0.1287465" layer="4" hasInfluenceArea="no" />
+      <object-ref idTarget="ExitButton" x="1025" y="82" scale="0.07" layer="8" hasInfluenceArea="no" />
+      <object-ref idTarget="Bolso" x="579" y="559" scale="0.03463506" layer="1" hasInfluenceArea="no" />
     </objects>
     <characters>
       <character-ref idTarget="Perronegro" x="570" y="557" scale="0.1043112" orientation="2" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="PerroGorra" x="105" y="783" scale="0.1192054" orientation="2" layer="5" hasInfluenceArea="no" />
-      <character-ref idTarget="PerroGorra2" x="691" y="736" scale="0.2953361" orientation="2" layer="4" hasInfluenceArea="no" />
+      <character-ref idTarget="PerroGorra" x="105" y="783" scale="0.1192054" orientation="2" layer="7" hasInfluenceArea="no" />
+      <character-ref idTarget="PerroGorra2" x="691" y="736" scale="0.2953361" orientation="2" layer="6" hasInfluenceArea="no" />
+      <character-ref idTarget="Margarita" x="906" y="746" scale="1.577214" orientation="2" layer="2" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="SceneFinalFamilia" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="SceneFinalFamilia" hideInventory="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
       <asset type="background" uri="assets/background/Picnic.png" />
+      <asset type="bgmusic" uri="assets/audio/Park ambiance.mp3" />
     </resources>
     <name>
     </name>
@@ -1743,29 +1749,10 @@
       <object-ref idTarget="ExitButton" x="1058" y="51" scale="0.04934541" layer="0" hasInfluenceArea="no" />
     </objects>
     <characters>
-      <character-ref idTarget="Omar" x="665" y="698" scale="0.2183085" orientation="2" layer="2" hasInfluenceArea="no" />
-      <character-ref idTarget="Tarik" x="450" y="557" scale="0.5837187" orientation="2" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Omar" x="571" y="728" scale="0.2183085" orientation="2" layer="3" hasInfluenceArea="no" />
+      <character-ref idTarget="Tarik" x="293" y="590" scale="0.5837187" orientation="2" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Margarita" x="921" y="730" scale="1.672423" orientation="2" layer="2" hasInfluenceArea="no" />
     </characters>
-  </scene>
-  <scene id="SceneFinalVacio" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/vacio.png" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-  </scene>
-  <scene id="SceneEnding" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/menu_final_base_cuadrados.png" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
   </scene>
   <graph-conversation id="LlevaraInicio">
     <dialogue-node nodeindex="0" editor-x="281" editor-y="70">
@@ -1799,7 +1786,7 @@
       <condition />
       <child nodeindex="4" />
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="688" editor-y="371">
+    <dialogue-node nodeindex="3" editor-x="682" editor-y="332">
       <speak-char idTarget="Margarita">#! ¡Ay, que me han robado el bolso!</speak-char>
       <condition />
       <speak-char idTarget="Margarita">Mira a ver si lo ves por ahí, bonito, anda, corre, corre, que tengo que ir a buscar a los niños y darles la merienda, que la otra me los tiene muertos de hambre.</speak-char>
@@ -1813,7 +1800,7 @@
       <condition />
       <speak-char idTarget="Margarita">¡Huy, no! Yo no pierdo nada, bonito.</speak-char>
       <condition />
-      <speak-char idTarget="Margarita">¡Ay! Esos de ahí son mis pañuelos, el ladrón debe haber ido **.</speak-char>
+      <speak-char idTarget="Margarita">¡Ay! Esos de ahí son mis pañuelos, el ladrón debe haber ido por ese lado.</speak-char>
       <condition />
       <speak-char idTarget="Margarita">Voy contigo, no vaya a ser que me lo robes tú también, que no me fío yo de vosotros un pelo.</speak-char>
       <condition />
@@ -1833,7 +1820,7 @@
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-player>Oiga, esta señora dice que le han robado el bolso, ¿no lo habrá visto por aquí?</speak-player>
       <condition />
-      <speak-char idTarget="Pedro">Pues he visto uno de éstos, negro, con un bolso azul, ha ido por **.</speak-char>
+      <speak-char idTarget="Pedro">Pues he visto uno de éstos, negro, con un bolso azul, ha ido hacia ese lado del puente.</speak-char>
       <condition />
       <speak-char idTarget="Margarita">¿Un negro? ¡Ay, ay, ay! Va a haber que llamar a la policía, si lo sabía yo, que en este barrio…</speak-char>
       <condition />
@@ -1863,8 +1850,7 @@
       <condition />
       <speak-player>¿Por dónde ha ido?</speak-player>
       <condition />
-      <speak-char idTarget="Johnny">
-      </speak-char>
+      <speak-char idTarget="Johnny">Por allí.</speak-char>
       <condition />
       <speak-char idTarget="Margarita">¿Con gorra? Ay, seguro que es gitano, ya verás tú, que nos metemos en una pelea de bandas, con esta gente no se puede vivir…</speak-char>
       <condition />
@@ -1890,7 +1876,7 @@
       <condition />
       <speak-player>¿Y por dónde ha ido?</speak-player>
       <condition />
-      <speak-char idTarget="Lolita">Creo que **.</speak-char>
+      <speak-char idTarget="Lolita">Creo que por allí.</speak-char>
       <condition />
       <end-conversation>
         <effect>
@@ -1898,38 +1884,6 @@
           <condition />
         </effect>
       </end-conversation>
-    </dialogue-node>
-  </graph-conversation>
-  <graph-conversation id="EleccionEntrePerrosYPersonas">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-player>
-      </speak-player>
-      <condition />
-      <child nodeindex="1" />
-    </dialogue-node>
-    <option-node nodeindex="1" showUserOption="yes" preListening="yes" editor-x="792" editor-y="50" x="792" y="50">
-      <speak-player>Tiene razón, señora, vayamos a reclamarles sus cosas.</speak-player>
-      <condition />
-      <child nodeindex="2" />
-      <speak-player>Creo que esa comida es suya, señora… Y ahí hay un perro marrón y otro negro, igual han sido ellos.</speak-player>
-      <condition />
-      <child nodeindex="3" />
-    </option-node>
-    <dialogue-node nodeindex="2" editor-x="88" editor-y="298">
-      <speak-char idTarget="Narrador">#O Te has dejado llevar por los prejuicios y has acusado injustamente a una familia que solo ha ido a pasar el domingo al parque. </speak-char>
-      <condition />
-      <speak-char idTarget="Narrador">#O La madre os ha regañado y avergonzado delante de todos los que estaban en el parque.</speak-char>
-      <condition />
-      <speak-char idTarget="Narrador">Te has quedado sin croqueta.</speak-char>
-      <condition />
-      <end-conversation />
-    </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="755" editor-y="353">
-      <speak-char idTarget="Narrador">#O Tienes razón, te has acercado a los perros y has visto que tenían el tapper y el bolso de la señora.</speak-char>
-      <condition />
-      <speak-char idTarget="Narrador">#O Estaban intentando comerse las croquetas de sus nietos.</speak-char>
-      <condition />
-      <end-conversation />
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="RecogerCroqueta">
@@ -1943,7 +1897,7 @@
   </graph-conversation>
   <graph-conversation id="ComentarioDesvio1">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-char idTarget="Margarita">Oye, bonito, ¿a dónde quieres llevarme? No ha dicho por ese lado, ha dicho **.</speak-char>
+      <speak-char idTarget="Margarita">Oye, bonito, ¿a dónde quieres llevarme? Ese no es el camino que nos han dicho.</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
@@ -2093,13 +2047,18 @@
   </graph-conversation>
   <graph-conversation id="CulparPerros">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="47">
-      <speak-char idTarget="Narrador">Creo que aquí tiene a sus ladrones, señora</speak-char>
+      <speak-player>Creo que aquí tiene a sus ladrones, señora</speak-player>
       <condition />
-      <speak-char idTarget="Narrador">Mire, el perro negro, el marrón con gorra...</speak-char>
+      <speak-player>Mire, el perro negro, el marrón con gorra...</speak-player>
       <condition />
       <speak-char idTarget="Margarita">¡Ay, por favor! Menos mal que no acusamos a esa pobre gente...</speak-char>
       <condition />
-      <end-conversation />
+      <end-conversation>
+        <effect>
+          <trigger-cutscene idTarget="Bueno" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="CulparOmar">
@@ -2124,12 +2083,14 @@
       <condition />
       <end-conversation />
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="106" editor-y="514">
+    <dialogue-node nodeindex="3" editor-x="183" editor-y="433">
       <speak-char idTarget="Omar">#! ¿Me estás acusando de robar unas tristes croquetas?</speak-char>
       <condition />
       <speak-player>#! ¡Sí! Ese tapper es de la señora</speak-player>
       <condition />
       <speak-char idTarget="Omar">#! De eso nada, éste tapper se lo he traído yo de mi casa para que mi hijo meriende.</speak-char>
+      <condition />
+      <speak-char idTarget="Margarita">Si sabré yo de quién es esa comida, que he pasado horas preparándosela a mis nietos.</speak-char>
       <condition />
       <speak-char idTarget="Omar">#! ¿Qué pasa, que porque sea negro no puedo ganarme mi propia comida?</speak-char>
       <condition />
@@ -2137,7 +2098,12 @@
       <condition />
       <speak-char idTarget="Omar">#! Y estoy cansado de la gente como usted, que me acusa de ladrón solo por estar en el parque con mi hijo</speak-char>
       <condition />
-      <end-conversation />
+      <end-conversation>
+        <effect>
+          <trigger-cutscene idTarget="Malo" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="IrALolita">
@@ -2627,4 +2593,38 @@
       </detailed>
     </description>
   </object>
+  <object id="Bolso" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/bolso.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <slidescene id="Malo" start="no" idTarget="SceneMenu" destinyX="-2147483648" destinyY="-2147483648" transitionTime="0" transitionType="0" next="new-scene" class="accesible" type="cutscene">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="slides" uri="assets/animation/finalMalo.eaa.xml" />
+      <asset type="music" uri="assets/audio/Park ambiance.mp3" />
+    </resources>
+    <name>
+    </name>
+  </slidescene>
+  <slidescene id="Bueno" start="no" idTarget="SceneMenu" destinyX="-2147483648" destinyY="-2147483648" transitionTime="0" transitionType="0" next="new-scene" class="accesible" type="cutscene">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="slides" uri="assets/animation/finalBueno.eaa.xml" />
+      <asset type="music" uri="assets/audio/Park ambiance.mp3" />
+    </resources>
+    <name>
+    </name>
+  </slidescene>
 </eAdventure>
