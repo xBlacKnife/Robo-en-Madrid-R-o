@@ -518,11 +518,15 @@
      <None Include="Assets\uAdventure\Resources\i18n\engine\it_IT.xml" />
      <None Include="Assets\uAdventure\Resources\i18n\engine\gl_ES.xml" />
      <None Include="Assets\uAdventure\Resources\i18n\engine\en_EN.xml" />
+     <None Include="Assets\uAdventure\Resources\CurrentGame\assets\animation\Lola.eaa.xml" />
      <None Include="Assets\uAdventure\Shaders\SimpleBlur.shader" />
+     <None Include="Assets\uAdventure\Resources\CurrentGame\assets\animation\Pgorra.eaa.xml" />
      <None Include="Assets\uAdventure\Resources\i18n\engine\zh_CN.xml" />
      <None Include="Assets\uAdventure\Resources\CurrentGame\chapter1.xml" />
      <None Include="Assets\uAdventure\Resources\CurrentGame\project.xml" />
      <None Include="Assets\uAdventure\Shaders\AlphaMask.shader" />
+     <None Include="Assets\uAdventure\Resources\CurrentGame\assets\animation\Pnegro.eaa.xml" />
+     <None Include="Assets\uAdventure\Resources\CurrentGame\assets\animation\Tarikn.eaa.xml" />
      <None Include="Assets\uAdventure\Resources\i18n\engine\es_ES.xml" />
      <None Include="Assets\uAdventure\Plugins\unity-tracker\csharp-tracker\AssetManager\LICENSE.txt" />
      <None Include="Assets\uAdventure\Resources\i18n\engine\ro_RO.xml" />
@@ -532,12 +536,16 @@
      <None Include="Assets\uAdventure\Resources\CurrentGame\descriptor.xml" />
      <None Include="Assets\uAdventure\Resources\i18n\engine\pt_PT.xml" />
      <None Include="Assets\uAdventure\Resources\CurrentGame\assets\animation\señorConPerro.eaa.xml" />
+     <None Include="Assets\uAdventure\Resources\CurrentGame\assets\animation\JohnnyNinyo.eaa.xml" />
      <None Include="Assets\uAdventureGeo\MapzenGo\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
      <None Include="Assets\uAdventure\Resources\i18n\engine\ru_RU.xml" />
+     <None Include="Assets\uAdventure\Resources\CurrentGame\assets\animation\OmarA.eaa.xml" />
+     <None Include="Assets\uAdventure\Resources\CurrentGame\assets\animation\Perromarron.eaa.xml" />
      <None Include="Assets\uAdventure\Shaders\ShinyDefault.shader" />
      <None Include="Assets\uAdventure\Resources\CurrentGame\assets\animation\senorconperro.eaa.xml" />
      <None Include="Assets\uAdventure\Resources\config_editor.xml" />
      <None Include="Assets\uAdventure\Resources\Upgrader\chapter-v0-to-v1.xml" />
+     <None Include="Assets\uAdventure\Resources\CurrentGame\assets\animation\PGorra2.eaa.xml" />
      <None Include="Assets\uAdventure\Resources\config_engine.xml" />
      <None Include="Assets\uAdventure\Plugins\unity-tracker\csharp-tracker\AssetManager\RageAssetManager\Resources\BaseAsset.VersionAndDependencies.xml" />
  <Reference Include="UnityEngine.CoreModule">
@@ -706,28 +714,28 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2017.4.33f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="LibTess">
- <HintPath>C:/Users/avr-9/Desktop/Desarrollo de Videojuegos/Juegos Serios/Prácticas/Robo_en_Madrid_Rio/Robo en Madrid Rio/Assets/uAdventure/Plugins/LibTess.dll</HintPath>
+ <HintPath>C:/Users/Rull/Desktop/Robo MR/Robo_en_Madrid_Rio/Robo en Madrid Rio/Assets/uAdventure/Plugins/LibTess.dll</HintPath>
  </Reference>
  <Reference Include="UniRxUniversal">
- <HintPath>C:/Users/avr-9/Desktop/Desarrollo de Videojuegos/Juegos Serios/Prácticas/Robo_en_Madrid_Rio/Robo en Madrid Rio/Assets/uAdventure/Plugins/UniRxUniversal.dll</HintPath>
+ <HintPath>C:/Users/Rull/Desktop/Robo MR/Robo_en_Madrid_Rio/Robo en Madrid Rio/Assets/uAdventure/Plugins/UniRxUniversal.dll</HintPath>
  </Reference>
  <Reference Include="Ionic.Zip">
- <HintPath>C:/Users/avr-9/Desktop/Desarrollo de Videojuegos/Juegos Serios/Prácticas/Robo_en_Madrid_Rio/Robo en Madrid Rio/Assets/uAdventure/Plugins/Zip/Ionic.Zip.dll</HintPath>
+ <HintPath>C:/Users/Rull/Desktop/Robo MR/Robo_en_Madrid_Rio/Robo en Madrid Rio/Assets/uAdventure/Plugins/Zip/Ionic.Zip.dll</HintPath>
  </Reference>
  <Reference Include="Triangulation">
- <HintPath>C:/Users/avr-9/Desktop/Desarrollo de Videojuegos/Juegos Serios/Prácticas/Robo_en_Madrid_Rio/Robo en Madrid Rio/Assets/uAdventureGeo/Plugins/Triangulation.dll</HintPath>
+ <HintPath>C:/Users/Rull/Desktop/Robo MR/Robo_en_Madrid_Rio/Robo en Madrid Rio/Assets/uAdventureGeo/Plugins/Triangulation.dll</HintPath>
  </Reference>
  <Reference Include="zxing.unity">
- <HintPath>C:/Users/avr-9/Desktop/Desarrollo de Videojuegos/Juegos Serios/Prácticas/Robo_en_Madrid_Rio/Robo en Madrid Rio/Assets/uAdventureQR/Plugins/zxing.unity.dll</HintPath>
+ <HintPath>C:/Users/Rull/Desktop/Robo MR/Robo_en_Madrid_Rio/Robo en Madrid Rio/Assets/uAdventureQR/Plugins/zxing.unity.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Users/avr-9/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll</HintPath>
+ <HintPath>C:/Users/Rull/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Purchasing">
- <HintPath>C:/Users/avr-9/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/UnityEngine.Purchasing.dll</HintPath>
+ <HintPath>C:/Users/Rull/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.StandardEvents">
- <HintPath>C:/Users/avr-9/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/Rull/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

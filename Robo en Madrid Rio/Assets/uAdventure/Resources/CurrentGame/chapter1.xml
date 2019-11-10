@@ -71,6 +71,45 @@
       </talk-to>
     </actions>
   </character>
+  <character id="Johnny">
+    <resources name="JohnnyNinyo">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/JohnnyNinyo.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#8A74FF" bubbleBorderColor="#5343A5">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#8A74FF" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="HablarConJohnny" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
   <character id="Pedro">
     <resources name="">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
@@ -110,49 +149,10 @@
       </talk-to>
     </actions>
   </character>
-  <character id="Johnny">
-    <resources name="No name">
-      <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/special/EmptyAnimation" />
-      <asset type="standright" uri="assets/special/EmptyAnimation" />
-      <asset type="standleft" uri="assets/special/EmptyAnimation" />
-      <asset type="speakup" uri="assets/special/EmptyAnimation" />
-      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
-      <asset type="speakright" uri="assets/special/EmptyAnimation" />
-      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
-      <asset type="useright" uri="assets/special/EmptyAnimation" />
-      <asset type="useleft" uri="assets/special/EmptyAnimation" />
-      <asset type="walkup" uri="assets/special/EmptyAnimation" />
-      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
-      <asset type="walkright" uri="assets/special/EmptyAnimation" />
-      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
-    </resources>
-    <textcolor showsSpeechBubble="no" bubbleBkgColor="#8A74FF" bubbleBorderColor="#5343A5">
-      <frontcolor color="#FFFFFF" />
-      <bordercolor color="#8A74FF" />
-    </textcolor>
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-    <voice name="" synthesizeAlways="no" />
-    <actions>
-      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <effect>
-          <trigger-conversation idTarget="HablarConJohnny" />
-          <condition />
-        </effect>
-      </talk-to>
-    </actions>
-  </character>
   <character id="Lolita">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/Lola.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -219,7 +219,193 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </character>
-  <map-scene id="MapScene" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.3873999035285 -3.70687723159791 0.00987099050250606 0.014419555664051" center="(40.3916496819103, -3.69794011116017)" zoom="19" start="no">
+  <character id="PerroPedro">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/Perromarron.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="Omar">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/OmarA.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="Tarik">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/Tarikn.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="Perronegro">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/Pnegro.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="PerroGorra">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/Pgorra.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="PerroGorra2">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/PGorra2.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <map-scene id="MapScene" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.3873999035285 -3.70687723159791 0.00987099050250606 0.014419555664051" center="(40.3916496819103, -3.69794011116017)" zoom="18" start="no">
     <map-element targetId="GeoInicio" layer="0" scale="1" orientation="2">
       <condition>
         <inactive flag="inicioFinalizado" />
@@ -306,7 +492,7 @@
     <actions>
       <enter-action>
         <effect>
-          <trigger-scene idTarget="SceneInicio" x="400" y="450" transitionTime="750" transitionType="5" />
+          <trigger-scene idTarget="InicioAutomatico1" x="400" y="450" transitionTime="750" transitionType="5" />
           <condition />
           <trigger-conversation idTarget="InicioAutomatico" />
           <condition />
@@ -398,7 +584,7 @@
     </geometries>
     <actions />
   </geoelement>
-  <scene id="SceneMenu" hideInventory="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="SceneMenu" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -421,17 +607,17 @@
       </exit>
     </exits>
   </scene>
-  <scene id="SceneInicio" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="InicioAutomatico1" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/PlazaRio2.jpg" />
+      <asset type="background" uri="assets/background/Inicio.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="254" y="6" width="16" height="16" hasInfluenceArea="no" idTarget="MapScene" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="6" y="1367" width="2048" height="173" hasInfluenceArea="no" idTarget="MapScene" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <post-effect>
           <navigate navigation-type="Ordered">
@@ -442,23 +628,23 @@
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="ExitButton" x="262" y="21" scale="0.02" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="ExitButton" x="1121" y="56" scale="0.07269175" layer="0" hasInfluenceArea="no" />
     </objects>
     <characters>
-      <character-ref idTarget="Margarita" x="225" y="166" scale="0.3713193" orientation="2" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Margarita" x="922" y="857" scale="1.552155" orientation="2" layer="1" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="ScenePedro" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/PlazaRio2.jpg" />
+      <asset type="background" uri="assets/background/Pedro.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="252" y="4" width="20" height="20" hasInfluenceArea="no" idTarget="MapScene" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="-6" y="272" width="120" height="543" hasInfluenceArea="no" idTarget="MapScene" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <effect>
           <trigger-conversation idTarget="SalirDespuesDeConverPedro" />
@@ -467,58 +653,89 @@
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="ExitButton" x="262" y="21" scale="0.02" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="ExitButton" x="139" y="11" scale="0.01065104" layer="0" hasInfluenceArea="no" />
     </objects>
     <characters>
-      <character-ref idTarget="Pedro" x="203" y="166" scale="0.3" orientation="2" layer="2" hasInfluenceArea="no" />
-      <character-ref idTarget="Margarita" x="146" y="339" scale="0.5910853" orientation="2" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Pedro" x="325" y="691" scale="0.6589144" orientation="2" layer="3" hasInfluenceArea="no" />
+      <character-ref idTarget="Margarita" x="483" y="803" scale="1.605155" orientation="2" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="PerroPedro" x="220" y="730" scale="0.08187845" orientation="2" layer="1" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="SceneJohnny" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/special/EmptyBackground.png" />
+      <asset type="background" uri="assets/background/Johnny.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="-20" y="-16" width="312" height="846" hasInfluenceArea="no" idTarget="MapScene" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" />
+      </exit>
+    </exits>
+    <characters>
+      <character-ref idTarget="Johnny" x="535" y="685" scale="0.4452926" orientation="2" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Margarita" x="819" y="787" scale="1.496511" orientation="2" layer="0" hasInfluenceArea="no" />
+    </characters>
   </scene>
   <scene id="SceneLolita" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/special/EmptyBackground.png" />
+      <asset type="background" uri="assets/background/Lolita.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="-20" y="-40" width="170" height="868" hasInfluenceArea="no" idTarget="MapScene" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" />
+      </exit>
+    </exits>
+    <characters>
+      <character-ref idTarget="Lolita" x="418" y="708" scale="0.6" orientation="2" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Margarita" x="781" y="856" scale="2.570818" orientation="2" layer="0" hasInfluenceArea="no" />
+    </characters>
   </scene>
-  <scene id="SceneFinalPerretes" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="SceneFinalPerretes" hideInventory="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/special/EmptyBackground.png" />
+      <asset type="background" uri="assets/background/perros.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="Perronegro" x="570" y="557" scale="0.1043112" orientation="2" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="PerroGorra" x="105" y="783" scale="0.1192054" orientation="2" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="PerroGorra2" x="691" y="736" scale="0.2953361" orientation="2" layer="1" hasInfluenceArea="no" />
+    </characters>
   </scene>
   <scene id="SceneFinalFamilia" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/special/EmptyBackground.png" />
+      <asset type="background" uri="assets/background/Picnic.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="ExitButton" x="1064" y="44" scale="0.04934541" layer="0" hasInfluenceArea="no" />
+    </objects>
+    <characters>
+      <character-ref idTarget="Omar" x="665" y="698" scale="0.2183085" orientation="2" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="Tarik" x="450" y="557" scale="0.5837187" orientation="2" layer="1" hasInfluenceArea="no" />
+    </characters>
   </scene>
   <scene id="SceneFinalVacio" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/special/EmptyBackground.png" />
+      <asset type="background" uri="assets/background/vacio.png" />
     </resources>
     <name>
     </name>
@@ -590,7 +807,7 @@
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-player>Oiga, esta señora dice que le han robado el bolso, ¿no lo habrá visto por aquí?</speak-player>
       <condition />
-      <speak-char idTarget="Pedro">Pues he visto uno de éstos, negro, con un bolso **, ha ido por **.</speak-char>
+      <speak-char idTarget="Pedro">Pues he visto uno de éstos, negro, con un bolso azul, ha ido por **.</speak-char>
       <condition />
       <speak-char idTarget="Margarita">¿Un negro? ¡Ay, ay, ay! Va a haber que llamar a la policía, si lo sabía yo, que en este barrio…</speak-char>
       <condition />
