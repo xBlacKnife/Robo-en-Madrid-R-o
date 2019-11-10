@@ -18,7 +18,7 @@
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
-    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+    <textcolor showsSpeechBubble="yes" bubbleBkgColor="#2B6730" bubbleBorderColor="#000000">
       <frontcolor color="#FFFFFF" />
       <bordercolor color="#000000" />
     </textcolor>
@@ -206,7 +206,7 @@
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
     <textcolor showsSpeechBubble="no" bubbleBkgColor="#418555" bubbleBorderColor="#21412A">
-      <frontcolor color="#000000" />
+      <frontcolor color="#C1C1C1" />
       <bordercolor color="#418555" />
     </textcolor>
     <description>
@@ -267,8 +267,8 @@
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
-    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
-      <frontcolor color="#FFFFFF" />
+    <textcolor showsSpeechBubble="yes" bubbleBkgColor="#D9BF4E" bubbleBorderColor="#000000">
+      <frontcolor color="#E4E5E4" />
       <bordercolor color="#000000" />
     </textcolor>
     <description>
@@ -280,6 +280,14 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="CulparOmar" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
   </character>
   <character id="Tarik">
     <resources name="No name">
@@ -634,7 +642,7 @@
       <character-ref idTarget="Margarita" x="922" y="857" scale="1.552155" orientation="2" layer="1" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="ScenePedro" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="ScenePedro" hideInventory="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -672,7 +680,7 @@
     <default-initial-position x="400" y="450" />
     <exits>
       <exit rectangular="yes" x="-20" y="-16" width="312" height="846" hasInfluenceArea="no" idTarget="MapScene" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+        <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
     <characters>
@@ -691,7 +699,7 @@
     <default-initial-position x="400" y="450" />
     <exits>
       <exit rectangular="yes" x="-20" y="-40" width="170" height="868" hasInfluenceArea="no" idTarget="MapScene" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+        <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
     <characters>
@@ -699,7 +707,7 @@
       <character-ref idTarget="Margarita" x="781" y="856" scale="2.570818" orientation="2" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="SceneFinalPerretes" hideInventory="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="SceneFinalPerretes" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -1061,6 +1069,55 @@
       <speak-char idTarget="Margarita">Es que el otro día, fíjate tú, salieron del cole y solo habían comido dos platos de sopa, uno de puré, tres filetes de pollo, uno de ternera, un plátano y un yogur…</speak-char>
       <condition />
       <speak-char idTarget="Margarita">Muertitos de hambre me los tenían.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="CulparPerros">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="47">
+      <speak-char idTarget="Narrador">Creo que aquí tiene a sus ladrones, señora</speak-char>
+      <condition />
+      <speak-char idTarget="Narrador">Mire, el perro negro, el marrón con gorra...</speak-char>
+      <condition />
+      <speak-char idTarget="Margarita">¡Ay, por favor! Menos mal que no acusamos a esa pobre gente...</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="CulparOmar">
+    <option-node nodeindex="0" preListening="yes" editor-x="50" editor-y="49" x="50" y="49">
+      <speak-player>Perdone, ¿ha visto a alguien más por aquí con un tapper de comida? A esta señora le ha desaparecido el bolso y es lo único que le falta</speak-player>
+      <condition />
+      <child nodeindex="1" />
+      <speak-player>Hola, ¿no se habrá encontrado por casualidad esas croquetas por ahí tiradas?</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>¡Así que es usted quien le ha robado las croquetas a la señora!</speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="1" editor-x="450" editor-y="36">
+      <speak-char idTarget="Omar">No, lo siento, si veo a alguien con uno, les avisaré. Mucha suerte.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="2" editor-x="460" editor-y="241">
+      <speak-char idTarget="Omar">¡Huy, no! Se lo he traído yo, que salen con un hambre del cole...</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="109" editor-y="422">
+      <speak-char idTarget="Omar">#! ¿Me estás acusando de robar unas tristes croquetas?</speak-char>
+      <condition />
+      <speak-player>#! ¡Sí! Ese tapper es de la señora</speak-player>
+      <condition />
+      <speak-char idTarget="Omar">#! De eso nada, éste tapper se lo he traído yo de mi casa para que mi hijo meriende.</speak-char>
+      <condition />
+      <speak-char idTarget="Omar">#! ¿Qué pasa, que porque sea negro no puedo ganarme mi propia comida?</speak-char>
+      <condition />
+      <speak-char idTarget="Omar">#! Pues que sepa que soy un hombre honrado que se gana el pan como habrá hecho usted en su momento</speak-char>
+      <condition />
+      <speak-char idTarget="Omar">#! Y estoy cansado de la gente como usted, que me acusa de ladrón solo por estar en el parque con mi hijo</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
