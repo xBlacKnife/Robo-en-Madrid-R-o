@@ -106,6 +106,8 @@
         <effect>
           <trigger-conversation idTarget="HablarConJohnny" />
           <condition />
+          <activate flag="johnnyFinalizado" />
+          <condition />
         </effect>
       </talk-to>
     </actions>
@@ -183,6 +185,8 @@
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
         <effect>
           <trigger-conversation idTarget="HablarConLolita" />
+          <condition />
+          <activate flag="lolitaFinalizado" />
           <condition />
         </effect>
       </talk-to>
@@ -285,6 +289,10 @@
         <effect>
           <trigger-conversation idTarget="CulparOmar" />
           <condition />
+          <activate flag="finalFamilia" />
+          <condition />
+          <trigger-scene idTarget="SceneEnding" x="960" y="810" transitionTime="0" transitionType="0" />
+          <condition />
         </effect>
       </talk-to>
     </actions>
@@ -381,6 +389,18 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="CulparPerros" />
+          <condition />
+          <activate flag="finalPerros" />
+          <condition />
+          <trigger-scene idTarget="SceneEnding" x="960" y="810" transitionTime="0" transitionType="0" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
   </character>
   <character id="PerroGorra2">
     <resources name="No name">
@@ -413,7 +433,7 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </character>
-  <map-scene id="MapScene" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.3873999035285 -3.70687723159791 0.00987099050250606 0.014419555664051" center="(40.3916496819103, -3.69794011116017)" zoom="18" start="no">
+  <map-scene id="MapScene" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.3873999035285 -3.70687723159791 0.00987099050250606 0.014419555664051" center="(40.390257981918, -3.69716227054487)" zoom="15" start="no">
     <map-element targetId="GeoInicio" layer="0" scale="1" orientation="2">
       <condition>
         <inactive flag="inicioFinalizado" />
@@ -439,7 +459,7 @@
         <active flag="pedroFinalizado" />
       </condition>
       <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.3918952941895, -3.699214220047)</param>
+        <param name="Position">(40.393871307373, -3.70214033126831)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">40</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -451,7 +471,7 @@
         <active flag="pedroFinalizado" />
       </condition>
       <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.3924865722656, -3.69792675971985)</param>
+        <param name="Position">(40.3944435119629, -3.70128202438354)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">40</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -481,6 +501,376 @@
         </either>
       </condition>
     </map-element>
+    <map-element targetId="GeoJohnny" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="bingo_pastilleroRecogidos" />
+        <inactive flag="johnnyFinalizado" />
+      </condition>
+    </map-element>
+    <map-element targetId="GeoBingo_Johnny" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="bingo_pastilleroRecogidos" />
+        <active flag="bingo_toJohnny" />
+        <inactive flag="johnnyFinalizado" />
+      </condition>
+    </map-element>
+    <map-element targetId="GeoPastillero_Johnny" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="bingo_pastilleroRecogidos" />
+        <inactive flag="johnnyFinalizado" />
+        <active flag="pastillero_toJohnny" />
+      </condition>
+    </map-element>
+    <map-element targetId="Cartera" layer="0" scale="0.02" orientation="2">
+      <condition>
+        <active flag="johnnyFinalizado" />
+      </condition>
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.3932151794434, -3.70120692253113)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="GeoCartera" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="johnnyFinalizado" />
+        <inactive flag="carteraRecogida" />
+        <inactive flag="lacaRecogida" />
+      </condition>
+    </map-element>
+    <map-element targetId="Laca" layer="0" scale="0.08" orientation="2">
+      <condition>
+        <active flag="johnnyFinalizado" />
+      </condition>
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.3938598632813, -3.70000529289246)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="GeoLaca" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="johnnyFinalizado" />
+        <inactive flag="lacaRecogida" />
+        <inactive flag="carteraRecogida" />
+      </condition>
+    </map-element>
+    <map-element targetId="Movil" layer="0" scale="0.15" orientation="2">
+      <condition>
+        <active flag="carteraRecogida" />
+      </condition>
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.3923072814941, -3.70018243789673)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="Fotos" layer="0" scale="0.12" orientation="2">
+      <condition>
+        <active flag="carteraRecogida" />
+      </condition>
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.392951965332, -3.70041584968567)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="Gafas" layer="0" scale="0.15" orientation="2">
+      <condition>
+        <active flag="carteraRecogida" />
+      </condition>
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.392448425293, -3.701003074646)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="GeoMovil" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="carteraRecogida" />
+        <inactive flag="fotosRecogido" />
+        <inactive flag="gafasRecogida" />
+        <inactive flag="movilRecogido" />
+      </condition>
+    </map-element>
+    <map-element targetId="GeoFotos" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="carteraRecogida" />
+        <inactive flag="fotosRecogido" />
+        <inactive flag="gafasRecogida" />
+        <inactive flag="movilRecogido" />
+      </condition>
+    </map-element>
+    <map-element targetId="GeoGafas" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="carteraRecogida" />
+        <inactive flag="fotosRecogido" />
+        <inactive flag="movilRecogido" />
+        <inactive flag="gafasRecogida" />
+      </condition>
+    </map-element>
+    <map-element targetId="GeoMovilGafas" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="carteraRecogida" />
+        <either>
+          <active flag="gafasRecogida" />
+          <active flag="movilRecogido" />
+        </either>
+        <either>
+          <inactive flag="gafasRecogida" />
+          <inactive flag="movilRecogido" />
+        </either>
+      </condition>
+    </map-element>
+    <map-element targetId="GeoMovilFotos" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="carteraRecogida" />
+        <either>
+          <active flag="fotosRecogido" />
+          <active flag="movilRecogido" />
+        </either>
+        <either>
+          <inactive flag="fotosRecogido" />
+          <inactive flag="movilRecogido" />
+        </either>
+      </condition>
+    </map-element>
+    <map-element targetId="GeoFotosGafas" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="carteraRecogida" />
+        <either>
+          <active flag="fotosRecogido" />
+          <active flag="gafasRecogida" />
+        </either>
+        <either>
+          <inactive flag="fotosRecogido" />
+          <inactive flag="gafasRecogida" />
+        </either>
+      </condition>
+    </map-element>
+    <map-element targetId="GeoLolita" layer="0" scale="1" orientation="2">
+      <condition>
+        <either>
+          <active flag="carteraRutaCompletada" />
+          <active flag="lacaRutaCompletada" />
+        </either>
+        <inactive flag="lolitaFinalizado" />
+      </condition>
+    </map-element>
+    <map-element targetId="Rulos" layer="0" scale="0.07" orientation="2">
+      <condition>
+        <active flag="lacaRecogida" />
+      </condition>
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.3932914733887, -3.69942331314087)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="Panuelo" layer="0" scale="0.12" orientation="2">
+      <condition>
+        <active flag="lacaRecogida" />
+      </condition>
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.3928833007813, -3.698725938797)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="Collar" layer="0" scale="0.04" orientation="2">
+      <condition>
+        <active flag="lacaRecogida" />
+      </condition>
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.3934097290039, -3.69870710372925)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="GeoCollar" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="lacaRecogida" />
+        <inactive flag="panueloRecogido" />
+        <inactive flag="collarRecogido" />
+        <inactive flag="rulosRecogido" />
+      </condition>
+    </map-element>
+    <map-element targetId="GeoRulos" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="lacaRecogida" />
+        <inactive flag="rulosRecogido" />
+        <inactive flag="collarRecogido" />
+        <inactive flag="panueloRecogido" />
+      </condition>
+    </map-element>
+    <map-element targetId="GeoPanuelo" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="lacaRecogida" />
+        <inactive flag="panueloRecogido" />
+        <inactive flag="collarRecogido" />
+        <inactive flag="rulosRecogido" />
+      </condition>
+    </map-element>
+    <map-element targetId="GeoCollarRulos" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="lacaRecogida" />
+        <either>
+          <active flag="collarRecogido" />
+          <active flag="rulosRecogido" />
+        </either>
+        <either>
+          <inactive flag="collarRecogido" />
+          <inactive flag="rulosRecogido" />
+        </either>
+      </condition>
+    </map-element>
+    <map-element targetId="GeoCollarPanuelo" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="lacaRecogida" />
+        <either>
+          <active flag="collarRecogido" />
+          <active flag="panueloRecogido" />
+        </either>
+        <either>
+          <inactive flag="collarRecogido" />
+          <inactive flag="panueloRecogido" />
+        </either>
+      </condition>
+    </map-element>
+    <map-element targetId="GeoRulosPanuelo" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="lacaRecogida" />
+        <either>
+          <active flag="panueloRecogido" />
+          <active flag="rulosRecogido" />
+        </either>
+        <either>
+          <inactive flag="rulosRecogido" />
+          <inactive flag="panueloRecogido" />
+        </either>
+      </condition>
+    </map-element>
+    <map-element targetId="OvilloLana" layer="0" scale="0.05" orientation="2">
+      <condition>
+        <active flag="lolitaFinalizado" />
+      </condition>
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.3919906616211, -3.69825387001038)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="Llaves" layer="0" scale="0.03" orientation="2">
+      <condition>
+        <active flag="lolitaFinalizado" />
+      </condition>
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.3914108276367, -3.69828605651855)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="Croqueta" layer="0" scale="0.15" orientation="2">
+      <condition>
+        <active flag="ovilloLanaRecogido" />
+        <active flag="llavesRecogida" />
+      </condition>
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.3908615112305, -3.69742250442505)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="GeoOvillo" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="lolitaFinalizado" />
+        <inactive flag="ovilloLanaRecogido" />
+        <inactive flag="llavesRecogida" />
+      </condition>
+    </map-element>
+    <map-element targetId="GeoLlaves" layer="0" scale="1" orientation="2">
+      <condition>
+        <inactive flag="ovilloLanaRecogido" />
+        <inactive flag="llavesRecogida" />
+        <active flag="lolitaFinalizado" />
+      </condition>
+    </map-element>
+    <map-element targetId="GeoOvilloLlaves" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="lolitaFinalizado" />
+        <either>
+          <active flag="ovilloLanaRecogido" />
+          <active flag="llavesRecogida" />
+        </either>
+        <either>
+          <inactive flag="llavesRecogida" />
+          <inactive flag="ovilloLanaRecogido" />
+        </either>
+      </condition>
+    </map-element>
+    <map-element targetId="GeoOvilloCroqueta" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="ovilloLanaRecogido" />
+        <active flag="llavesRecogida" />
+        <inactive flag="croquetaRecogida" />
+      </condition>
+    </map-element>
+    <map-element targetId="GeoPerros" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="croquetaRecogida" />
+        <inactive flag="PerrosVisitado" />
+      </condition>
+    </map-element>
+    <map-element targetId="GeoFamilia" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="croquetaRecogida" />
+        <inactive flag="FamiliaVisitado" />
+      </condition>
+    </map-element>
+    <map-element targetId="GeoCroquetaPerros" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="croquetaRecogida" />
+        <inactive flag="PerrosVisitado" />
+        <inactive flag="FamiliaVisitado" />
+      </condition>
+    </map-element>
+    <map-element targetId="GeoCroquetaFamilia" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="croquetaRecogida" />
+        <inactive flag="FamiliaVisitado" />
+        <inactive flag="PerrosVisitado" />
+      </condition>
+    </map-element>
+    <map-element targetId="GeoPerrosFamilia" layer="0" scale="1" orientation="2">
+      <condition>
+        <either>
+          <active flag="FamiliaVisitado" />
+          <active flag="PerrosVisitado" />
+        </either>
+      </condition>
+    </map-element>
   </map-scene>
   <geoelement id="GeoInicio">
     <description>
@@ -493,7 +883,7 @@
     <geometries>
       <geometry influence="40">
         <Point>
-          <pos>40.3903675231919 -3.69943879544742</pos>
+          <pos>40.3918547358378 -3.70127342641283</pos>
         </Point>
       </geometry>
     </geometries>
@@ -520,9 +910,9 @@
       </detailed>
     </description>
     <geometries>
-      <geometry influence="40">
+      <geometry influence="20">
         <Point>
-          <pos>40.3915120794559 -3.69714081287378</pos>
+          <pos>40.3931300070567 -3.70210289955065</pos>
         </Point>
       </geometry>
     </geometries>
@@ -548,9 +938,9 @@
       </detailed>
     </description>
     <geometries>
-      <geometry influence="20">
+      <geometry influence="10">
         <LineString>
-          <posList>40.3919185735878 -3.69919538497912 40.3910606427796 -3.6981493234633 40.3913861526811 -3.69763702154145</posList>
+          <posList>40.3931361012084 -3.70210289955038 40.3933527107472 -3.70166301727187 40.3938865745114 -3.70213240384948</posList>
         </LineString>
       </geometry>
     </geometries>
@@ -566,9 +956,9 @@
       </detailed>
     </description>
     <geometries>
-      <geometry influence="20">
+      <geometry influence="10">
         <LineString>
-          <posList>40.3924946817807 -3.69790792465191 40.3918981899706 -3.69756460189802</posList>
+          <posList>40.3933526659857 -3.7016576528538 40.3944598761308 -3.70129287242775</posList>
         </LineString>
       </geometry>
     </geometries>
@@ -584,26 +974,604 @@
       </detailed>
     </description>
     <geometries>
-      <geometry influence="20">
+      <geometry influence="10">
         <LineString>
-          <posList>40.391963634726 -3.69922757148718 40.3925518078797 -3.69791328906988</posList>
+          <posList>40.3939204906331 -3.70213508605844 40.3944866531089 -3.70129287242775</posList>
         </LineString>
       </geometry>
     </geometries>
     <actions />
   </geoelement>
-  <scene id="SceneMenu" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <geoelement id="GeoJohnny">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="20">
+        <Point>
+          <pos>40.3939208028365 -3.70068132877241</pos>
+        </Point>
+      </geometry>
+    </geometries>
+    <actions>
+      <enter-action>
+        <effect>
+          <trigger-scene idTarget="SceneJohnny" x="546" y="612" transitionTime="0" transitionType="0" />
+          <condition />
+          <activate flag="johnnyFinalizado" />
+          <condition />
+        </effect>
+        <only-from-outside>True</only-from-outside>
+      </enter-action>
+    </actions>
+  </geoelement>
+  <geoelement id="GeoBingo_Johnny">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="10">
+        <LineString>
+          <posList>40.3944897162263 -3.70127588499496 40.3944406927138 -3.70089590549378 40.3941138449065 -3.7004533410063 40.3939208028366 -3.70068669319062</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <geoelement id="GeoPastillero_Johnny">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="10">
+        <LineString>
+          <posList>40.3939167172577 -3.70068669319062 40.3935388001446 -3.70118826627629 40.3939095674941 -3.7021270394315 40.3939208028366 -3.70068669319062</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <geoelement id="GeoCartera">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="10">
+        <LineString>
+          <posList>40.3932649213757 -3.70121359828682 40.3935449285473 -3.70118021964935 40.3939167172577 -3.70068132877258</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <geoelement id="GeoLaca">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="10">
+        <LineString>
+          <posList>40.3939227026779 -3.70068252090185 40.3940902111914 -3.70036602023808 40.3938981892642 -3.70007634166448</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <geoelement id="GeoMovil">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="10">
+        <LineString>
+          <posList>40.3932507645961 -3.70120167732157 40.3927931736739 -3.7007725238792 40.3923437509916 -3.70017170905983</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <geoelement id="GeoFotos">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="10">
+        <LineString>
+          <posList>40.3932507645959 -3.70120167732143 40.3931261530903 -3.70067864656341 40.39301788389 -3.70042383670697</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <geoelement id="GeoGafas">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="10">
+        <LineString>
+          <posList>40.3932528074053 -3.70120167732127 40.3929463852661 -3.70118826627625 40.3924826637769 -3.70101124048125</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <geoelement id="GeoMovilGafas">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="10">
+        <LineString>
+          <posList>40.3924826637769 -3.70100855827225 40.3923927790659 -3.70072424411669 40.3923498795025 -3.70018243789568</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <geoelement id="GeoMovilFotos">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="10">
+        <LineString>
+          <posList>40.3930260551564 -3.70042651891604 40.3926420045606 -3.70026290416612 40.3923600936867 -3.70018243789558</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <geoelement id="GeoFotosGafas">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="10">
+        <LineString>
+          <posList>40.3930219695544 -3.70042920112487 40.3927645741376 -3.70072424411652 40.3924867494426 -3.70100319385408</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <geoelement id="GeoLolita">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="25">
+        <Point>
+          <pos>40.3922007522383 -3.69923830032379</pos>
+        </Point>
+      </geometry>
+    </geometries>
+    <actions>
+      <enter-action>
+        <effect>
+          <trigger-scene idTarget="SceneLolita" x="546" y="612" transitionTime="0" transitionType="0" />
+          <condition />
+        </effect>
+        <only-from-outside>True</only-from-outside>
+      </enter-action>
+    </actions>
+  </geoelement>
+  <geoelement id="GeoCollar">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="10">
+        <LineString>
+          <posList>40.3934468740389 -3.69869112968337 40.3937655506662 -3.69925975799454 40.3938860754078 -3.70004564523588</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <geoelement id="GeoRulos">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="10">
+        <LineString>
+          <posList>40.3938881181982 -3.70001077651868 40.3933488193886 -3.69940996169935</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <geoelement id="GeoPanuelo">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="10">
+        <LineString>
+          <posList>40.3929239142542 -3.69873404502761 40.3931935659003 -3.6988949775685 40.3935020297169 -3.69930535554779 40.3938942465689 -3.70003491639984</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <geoelement id="GeoCollarRulos">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="10">
+        <LineString>
+          <posList>40.3933202200887 -3.69942069053546 40.3934448312351 -3.69870185851949</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <geoelement id="GeoCollarPanuelo">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="10">
+        <LineString>
+          <posList>40.3934427884313 -3.69870722293749 40.3929177857951 -3.69873404502765</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <geoelement id="GeoRulosPanuelo">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="10">
+        <LineString>
+          <posList>40.3933222628962 -3.69942337274446 40.392932085532 -3.69873940944569</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <geoelement id="GeoOvillo">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="10">
+        <LineString>
+          <posList>40.3921966665524 -3.69923293590435 40.3918657253914 -3.69878768920787 40.3920454961004 -3.69826734065898</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <geoelement id="GeoLlaves">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="10">
+        <LineString>
+          <posList>40.3922007522356 -3.69924366474039 40.391882068203 -3.69880378246195 40.3914734967242 -3.69829416274913</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <geoelement id="GeoOvilloLlaves">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="10">
+        <LineString>
+          <posList>40.3920332390219 -3.6982887983311 40.3914775824513 -3.6982887983311</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <geoelement id="GeoOvilloCroqueta">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="20">
+        <LineString>
+          <posList>40.3918003541056 -3.69830489158518 40.3908769779137 -3.69742512702828</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <geoelement id="GeoLlavesCroqueta">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="0">
+        <LineString>
+          <posList>40.3914040393294 -3.69848728179945 40.3913386675953 -3.69741439819351 40.3908483775671 -3.69750022888196</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <geoelement id="GeoPerros">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="20">
+        <Point>
+          <pos>40.3898807241151 -3.69804918765936</pos>
+        </Point>
+      </geometry>
+    </geometries>
+    <actions>
+      <enter-action>
+        <effect>
+          <trigger-scene idTarget="SceneFinalPerretes" x="545" y="612" transitionTime="0" transitionType="0" />
+          <condition />
+          <activate flag="PerrosVisitado" />
+          <condition />
+          <activate flag="isInsideEnding" />
+          <condition />
+        </effect>
+        <only-from-outside>True</only-from-outside>
+      </enter-action>
+      <exit-action>
+        <effect>
+          <deactivate flag="isInsideEnding" />
+          <condition />
+        </effect>
+        <only-from-inside>True</only-from-inside>
+      </exit-action>
+    </actions>
+  </geoelement>
+  <geoelement id="GeoFamilia">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="20">
+        <Point>
+          <pos>40.3903349307819 -3.69909524917595</pos>
+        </Point>
+      </geometry>
+    </geometries>
+    <actions>
+      <enter-action>
+        <effect>
+          <trigger-scene idTarget="SceneFinalFamilia" x="546" y="612" transitionTime="0" transitionType="0" />
+          <condition />
+          <activate flag="FamiliaVisitado" />
+          <condition />
+          <activate flag="isInsideEnding" />
+          <condition />
+        </effect>
+        <only-from-outside>True</only-from-outside>
+      </enter-action>
+      <exit-action>
+        <effect>
+          <deactivate flag="isInsideEnding" />
+          <condition />
+        </effect>
+        <only-from-inside>True</only-from-inside>
+      </exit-action>
+    </actions>
+  </geoelement>
+  <geoelement id="GeoCroquetaPerros">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="10">
+        <LineString>
+          <posList>40.3898759584478 -3.69805812835585 40.390219166798 -3.69822978973281 40.3908892352028 -3.69745731353652</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <geoelement id="GeoCroquetaFamilia">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="10">
+        <LineString>
+          <posList>40.3908974067275 -3.69745731353652 40.390219166798 -3.69822978973281 40.3903335691928 -3.6990773677815</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <geoelement id="GeoPerrosFamilia">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="10">
+        <LineString>
+          <posList>40.3903253975996 -3.69908809661758 40.3899495032415 -3.69855165481461 40.3898677867991 -3.69803667068373</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <scene id="SceneMenu" hideInventory="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/special/EmptyBackground.png" />
+      <asset type="background" uri="assets/background/menu_inicial_robo_en_madrid_rio.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="23" y="9" width="761" height="573" hasInfluenceArea="no" idTarget="MapScene" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="no" x="858" y="796" width="205" height="208" hasInfluenceArea="no" idTarget="MapScene" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <point x="911" y="812" />
+        <point x="936" y="796" />
+        <point x="967" y="799" />
+        <point x="1004" y="805" />
+        <point x="1036" y="826" />
+        <point x="1052" y="853" />
+        <point x="1063" y="890" />
+        <point x="1059" y="922" />
+        <point x="1050" y="949" />
+        <point x="1029" y="984" />
+        <point x="983" y="1003" />
+        <point x="933" y="1004" />
+        <point x="901" y="990" />
+        <point x="876" y="963" />
+        <point x="867" y="938" />
+        <point x="858" y="913" />
+        <point x="862" y="869" />
+        <point x="876" y="843" />
         <post-effect>
           <trigger-conversation idTarget="LlevaraInicio" />
           <condition />
@@ -625,7 +1593,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="6" y="1367" width="2048" height="173" hasInfluenceArea="no" idTarget="MapScene" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="1087" y="1" width="64" height="59" hasInfluenceArea="no" idTarget="MapScene" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <post-effect>
           <navigate navigation-type="Ordered">
@@ -642,7 +1610,34 @@
       <character-ref idTarget="Margarita" x="922" y="857" scale="1.552155" orientation="2" layer="1" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="ScenePedro" hideInventory="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="ScenePedro" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Puente.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="1116" y="32" width="63" height="65" hasInfluenceArea="no" idTarget="MapScene" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <effect>
+          <trigger-conversation idTarget="SalirDespuesDeConverPedro" />
+          <condition />
+        </effect>
+      </exit>
+    </exits>
+    <objects>
+      <object-ref idTarget="ExitButton" x="1147" y="92" scale="0.07761614" layer="0" hasInfluenceArea="no" />
+    </objects>
+    <characters>
+      <character-ref idTarget="Pedro" x="417" y="839" scale="1.075893" orientation="2" layer="3" hasInfluenceArea="no" />
+      <character-ref idTarget="Margarita" x="868" y="883" scale="1.779799" orientation="2" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="PerroPedro" x="266" y="835" scale="0.1069262" orientation="2" layer="1" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="SceneJohnny" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -652,40 +1647,19 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="-6" y="272" width="120" height="543" hasInfluenceArea="no" idTarget="MapScene" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="1002" y="15" width="62" height="64" hasInfluenceArea="no" idTarget="MapScene" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
-        <effect>
-          <trigger-conversation idTarget="SalirDespuesDeConverPedro" />
-          <condition />
-        </effect>
+        <condition>
+          <active flag="johnnyFinalizado" />
+        </condition>
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="ExitButton" x="139" y="11" scale="0.01065104" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="ExitButton" x="1032" y="71" scale="0.07017157" layer="0" hasInfluenceArea="no" />
     </objects>
     <characters>
-      <character-ref idTarget="Pedro" x="325" y="691" scale="0.6589144" orientation="2" layer="3" hasInfluenceArea="no" />
-      <character-ref idTarget="Margarita" x="483" y="803" scale="1.605155" orientation="2" layer="2" hasInfluenceArea="no" />
-      <character-ref idTarget="PerroPedro" x="220" y="730" scale="0.08187845" orientation="2" layer="1" hasInfluenceArea="no" />
-    </characters>
-  </scene>
-  <scene id="SceneJohnny" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/Johnny.png" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <exits>
-      <exit rectangular="yes" x="-20" y="-16" width="312" height="846" hasInfluenceArea="no" idTarget="MapScene" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-      </exit>
-    </exits>
-    <characters>
-      <character-ref idTarget="Johnny" x="535" y="685" scale="0.4452926" orientation="2" layer="1" hasInfluenceArea="no" />
-      <character-ref idTarget="Margarita" x="819" y="787" scale="1.496511" orientation="2" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Johnny" x="789" y="795" scale="0.4885285" orientation="2" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="Margarita" x="247" y="706" scale="0.75102" orientation="2" layer="1" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="SceneLolita" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -698,13 +1672,19 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="-20" y="-40" width="170" height="868" hasInfluenceArea="no" idTarget="MapScene" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="1019" y="17" width="50" height="55" hasInfluenceArea="no" idTarget="MapScene" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="lolitaFinalizado" />
+        </condition>
       </exit>
     </exits>
+    <objects>
+      <object-ref idTarget="ExitButton" x="1044" y="69" scale="0.07" layer="0" hasInfluenceArea="no" />
+    </objects>
     <characters>
-      <character-ref idTarget="Lolita" x="418" y="708" scale="0.6" orientation="2" layer="1" hasInfluenceArea="no" />
-      <character-ref idTarget="Margarita" x="781" y="856" scale="2.570818" orientation="2" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Lolita" x="418" y="708" scale="0.6" orientation="2" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="Margarita" x="781" y="856" scale="2.570818" orientation="2" layer="1" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="SceneFinalPerretes" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -716,10 +1696,27 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="996" y="30" width="58" height="55" hasInfluenceArea="no" idTarget="MapScene" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" />
+        <post-effect>
+          <activate flag="PerrosVisitado" />
+          <condition />
+          <deactivate flag="FamiliaVisitado" />
+          <condition />
+        </post-effect>
+      </exit>
+    </exits>
+    <objects>
+      <object-ref idTarget="Tupper" x="141" y="812" scale="0.3" layer="3" hasInfluenceArea="no" />
+      <object-ref idTarget="Croqueta" x="192" y="799" scale="0.1" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="Croqueta" x="181" y="787" scale="0.1287465" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="ExitButton" x="1025" y="82" scale="0.07" layer="6" hasInfluenceArea="no" />
+    </objects>
     <characters>
       <character-ref idTarget="Perronegro" x="570" y="557" scale="0.1043112" orientation="2" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="PerroGorra" x="105" y="783" scale="0.1192054" orientation="2" layer="2" hasInfluenceArea="no" />
-      <character-ref idTarget="PerroGorra2" x="691" y="736" scale="0.2953361" orientation="2" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="PerroGorra" x="105" y="783" scale="0.1192054" orientation="2" layer="5" hasInfluenceArea="no" />
+      <character-ref idTarget="PerroGorra2" x="691" y="736" scale="0.2953361" orientation="2" layer="4" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="SceneFinalFamilia" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -731,8 +1728,19 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="1032" y="8" width="51" height="54" hasInfluenceArea="no" idTarget="MapScene" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <activate flag="FamiliaVisitado" />
+          <condition />
+          <deactivate flag="PerrosVisitado" />
+          <condition />
+        </post-effect>
+      </exit>
+    </exits>
     <objects>
-      <object-ref idTarget="ExitButton" x="1064" y="44" scale="0.04934541" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="ExitButton" x="1058" y="51" scale="0.04934541" layer="0" hasInfluenceArea="no" />
     </objects>
     <characters>
       <character-ref idTarget="Omar" x="665" y="698" scale="0.2183085" orientation="2" layer="2" hasInfluenceArea="no" />
@@ -744,6 +1752,16 @@
     </documentation>
     <resources name="No name">
       <asset type="background" uri="assets/background/vacio.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
+  <scene id="SceneEnding" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/menu_final_base_cuadrados.png" />
     </resources>
     <name>
     </name>
@@ -945,7 +1963,7 @@
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="CogerPastillero">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+    <dialogue-node nodeindex="0" editor-x="126" editor-y="41">
       <speak-player>Anda, un pastillero médico ¿Es suyo?</speak-player>
       <condition />
       <speak-char idTarget="Margarita">Sí, sí, mías todas. Entre la cabeza, la espalda y el corazón me tienen loca con tanta pastilla.</speak-char>
@@ -1085,7 +2103,7 @@
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="CulparOmar">
-    <option-node nodeindex="0" preListening="yes" editor-x="50" editor-y="49" x="50" y="49">
+    <option-node nodeindex="0" preListening="yes" editor-x="92" editor-y="34" x="92" y="34">
       <speak-player>Perdone, ¿ha visto a alguien más por aquí con un tapper de comida? A esta señora le ha desaparecido el bolso y es lo único que le falta</speak-player>
       <condition />
       <child nodeindex="1" />
@@ -1096,17 +2114,17 @@
       <condition />
       <child nodeindex="3" />
     </option-node>
-    <dialogue-node nodeindex="1" editor-x="450" editor-y="36">
+    <dialogue-node nodeindex="1" editor-x="681" editor-y="21">
       <speak-char idTarget="Omar">No, lo siento, si veo a alguien con uno, les avisaré. Mucha suerte.</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
-    <dialogue-node nodeindex="2" editor-x="460" editor-y="241">
+    <dialogue-node nodeindex="2" editor-x="642" editor-y="252">
       <speak-char idTarget="Omar">¡Huy, no! Se lo he traído yo, que salen con un hambre del cole...</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="109" editor-y="422">
+    <dialogue-node nodeindex="3" editor-x="106" editor-y="514">
       <speak-char idTarget="Omar">#! ¿Me estás acusando de robar unas tristes croquetas?</speak-char>
       <condition />
       <speak-player>#! ¡Sí! Ese tapper es de la señora</speak-player>
@@ -1118,6 +2136,15 @@
       <speak-char idTarget="Omar">#! Pues que sepa que soy un hombre honrado que se gana el pan como habrá hecho usted en su momento</speak-char>
       <condition />
       <speak-char idTarget="Omar">#! Y estoy cansado de la gente como usted, que me acusa de ladrón solo por estar en el parque con mi hijo</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="IrALolita">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>“Ya tenemos su rastro ¡Han ido hacia el puente!</speak-player>
+      <condition />
+      <speak-char idTarget="Margarita">“Ay, mira que me hacen de andar estos maleantes. Ya no llego a tiempo a la peluquería a que me hagan la permanente</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
@@ -1162,6 +2189,10 @@
           </condition>
           <trigger-conversation idTarget="CogerPastillero" />
           <condition />
+          <activate flag="pastillero_toJohnny" />
+          <condition>
+            <active flag="bingo_pastilleroRecogidos" />
+          </condition>
         </effect>
       </grab>
     </actions>
@@ -1192,13 +2223,17 @@
           </condition>
           <trigger-conversation idTarget="CogerBingo" />
           <condition />
+          <activate flag="bingo_toJohnny" />
+          <condition>
+            <active flag="bingo_pastilleroRecogidos" />
+          </condition>
         </effect>
       </grab>
     </actions>
   </object>
   <object id="Cartera" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/special/EmptyImage.png" />
+      <asset type="image" uri="assets/image/monedero.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -1224,7 +2259,7 @@
   </object>
   <object id="Movil" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/special/EmptyImage.png" />
+      <asset type="image" uri="assets/image/movil.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -1244,13 +2279,29 @@
           <condition />
           <trigger-conversation idTarget="CogerMovil" />
           <condition />
+          <activate flag="carteraRutaCompletada" />
+          <condition>
+            <active flag="fotosRecogido" />
+            <active flag="gafasRecogida" />
+            <active flag="movilRecogido" />
+          </condition>
+          <navigate navigation-type="Ordered">
+            <step locks="False">GeoLolita</step>
+          </navigate>
+          <condition>
+            <active flag="carteraRutaCompletada" />
+          </condition>
+          <trigger-conversation idTarget="IrALolita" />
+          <condition>
+            <active flag="carteraRutaCompletada" />
+          </condition>
         </effect>
       </grab>
     </actions>
   </object>
   <object id="Gafas" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/special/EmptyImage.png" />
+      <asset type="image" uri="assets/image/gafas.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -1270,13 +2321,29 @@
           <condition />
           <trigger-conversation idTarget="CogerGafas" />
           <condition />
+          <activate flag="carteraRutaCompletada" />
+          <condition>
+            <active flag="fotosRecogido" />
+            <active flag="gafasRecogida" />
+            <active flag="movilRecogido" />
+          </condition>
+          <navigate navigation-type="Ordered">
+            <step locks="False">GeoLolita</step>
+          </navigate>
+          <condition>
+            <active flag="carteraRutaCompletada" />
+          </condition>
+          <trigger-conversation idTarget="IrALolita" />
+          <condition>
+            <active flag="carteraRutaCompletada" />
+          </condition>
         </effect>
       </grab>
     </actions>
   </object>
   <object id="Fotos" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/special/EmptyImage.png" />
+      <asset type="image" uri="assets/image/nieto foto.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -1296,13 +2363,29 @@
           <condition />
           <trigger-conversation idTarget="CogerFotos" />
           <condition />
+          <activate flag="carteraRutaCompletada" />
+          <condition>
+            <active flag="fotosRecogido" />
+            <active flag="gafasRecogida" />
+            <active flag="movilRecogido" />
+          </condition>
+          <navigate navigation-type="Ordered">
+            <step locks="False">GeoLolita</step>
+          </navigate>
+          <condition>
+            <active flag="carteraRutaCompletada" />
+          </condition>
+          <trigger-conversation idTarget="IrALolita" />
+          <condition>
+            <active flag="carteraRutaCompletada" />
+          </condition>
         </effect>
       </grab>
     </actions>
   </object>
   <object id="Laca" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/special/EmptyImage.png" />
+      <asset type="image" uri="assets/image/laca.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -1328,7 +2411,7 @@
   </object>
   <object id="Rulos" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/special/EmptyImage.png" />
+      <asset type="image" uri="assets/image/rulos.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -1348,13 +2431,29 @@
           <condition />
           <trigger-conversation idTarget="CogerRulos" />
           <condition />
+          <activate flag="lacaRutaCompletada" />
+          <condition>
+            <active flag="collarRecogido" />
+            <active flag="panueloRecogido" />
+            <active flag="rulosRecogido" />
+          </condition>
+          <navigate navigation-type="Ordered">
+            <step locks="False">GeoLolita</step>
+          </navigate>
+          <condition>
+            <active flag="lacaRutaCompletada" />
+          </condition>
+          <trigger-conversation idTarget="IrALolita" />
+          <condition>
+            <active flag="lacaRutaCompletada" />
+          </condition>
         </effect>
       </grab>
     </actions>
   </object>
   <object id="Panuelo" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/special/EmptyImage.png" />
+      <asset type="image" uri="assets/image/panuelo.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -1374,13 +2473,29 @@
           <condition />
           <trigger-conversation idTarget="CogerPanuelo" />
           <condition />
+          <activate flag="lacaRutaCompletada" />
+          <condition>
+            <active flag="collarRecogido" />
+            <active flag="panueloRecogido" />
+            <active flag="rulosRecogido" />
+          </condition>
+          <navigate navigation-type="Ordered">
+            <step locks="False">GeoLolita</step>
+          </navigate>
+          <condition>
+            <active flag="lacaRutaCompletada" />
+          </condition>
+          <trigger-conversation idTarget="IrALolita" />
+          <condition>
+            <active flag="lacaRutaCompletada" />
+          </condition>
         </effect>
       </grab>
     </actions>
   </object>
   <object id="Collar" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/special/EmptyImage.png" />
+      <asset type="image" uri="assets/image/collar.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -1400,13 +2515,29 @@
           <condition />
           <trigger-conversation idTarget="CogerCollar" />
           <condition />
+          <activate flag="lacaRutaCompletada" />
+          <condition>
+            <active flag="rulosRecogido" />
+            <active flag="panueloRecogido" />
+            <active flag="collarRecogido" />
+          </condition>
+          <navigate navigation-type="Ordered">
+            <step locks="False">GeoLolita</step>
+          </navigate>
+          <condition>
+            <active flag="lacaRutaCompletada" />
+          </condition>
+          <trigger-conversation idTarget="IrALolita" />
+          <condition>
+            <active flag="lacaRutaCompletada" />
+          </condition>
         </effect>
       </grab>
     </actions>
   </object>
   <object id="OvilloLana" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/special/EmptyImage.png" />
+      <asset type="image" uri="assets/image/lana.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -1432,7 +2563,7 @@
   </object>
   <object id="Llaves" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/special/EmptyImage.png" />
+      <asset type="image" uri="assets/image/llaves.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -1458,7 +2589,7 @@
   </object>
   <object id="Croqueta" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/special/EmptyImage.png" />
+      <asset type="image" uri="assets/image/croqueta.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -1481,5 +2612,19 @@
         </effect>
       </grab>
     </actions>
+  </object>
+  <object id="Tupper" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/tapper definitivo.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
   </object>
 </eAdventure>
