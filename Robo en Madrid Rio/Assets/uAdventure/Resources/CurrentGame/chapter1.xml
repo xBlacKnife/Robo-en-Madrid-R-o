@@ -1538,7 +1538,7 @@
     </geometries>
     <actions />
   </geoelement>
-  <scene id="SceneMenu" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="SceneMenu" hideInventory="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -1724,7 +1724,7 @@
       <character-ref idTarget="Margarita" x="906" y="746" scale="1.577214" orientation="2" layer="2" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="SceneFinalFamilia" hideInventory="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="SceneFinalFamilia" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -1756,7 +1756,7 @@
   </scene>
   <graph-conversation id="LlevaraInicio">
     <dialogue-node nodeindex="0" editor-x="281" editor-y="70">
-      <speak-player>Hemos quedado en ** y ya llego tarde, debería darme prisa.</speak-player>
+      <speak-player>Hemos quedado en el centro comercial y ya llego tarde, debería darme prisa.</speak-player>
       <condition />
       <end-conversation />
     </dialogue-node>
