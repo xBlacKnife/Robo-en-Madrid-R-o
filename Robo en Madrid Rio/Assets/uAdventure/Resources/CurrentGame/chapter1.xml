@@ -1840,7 +1840,7 @@
   </graph-conversation>
   <graph-conversation id="HablarConJohnny">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-player>Hola, ¿has visto alguien corriendo por aquí con un bolso **?</speak-player>
+      <speak-player>Hola, ¿has visto alguien corriendo por aquí con un bolso azul?</speak-player>
       <condition />
       <speak-player>Esta señora dice que se lo han llevado. </speak-player>
       <condition />
@@ -1872,7 +1872,7 @@
       <condition />
       <speak-char idTarget="Lolita">¡Huy, sí, y era muy bonito! Pero cuando le he ido a acariciar, ha salido corriendo.</speak-char>
       <condition />
-      <speak-char idTarget="Margarita">#! ¿¡A acariciar!?</speak-char>
+      <speak-char idTarget="Margarita">#! ¿A acariciar?</speak-char>
       <condition />
       <speak-player>¿Y por dónde ha ido?</speak-player>
       <condition />
