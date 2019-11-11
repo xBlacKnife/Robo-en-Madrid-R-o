@@ -2066,7 +2066,7 @@
       <speak-player>Perdone, ¿ha visto a alguien más por aquí con un tapper de comida? A esta señora le ha desaparecido el bolso y es lo único que le falta</speak-player>
       <condition />
       <child nodeindex="1" />
-      <speak-player>Hola, ¿no se habrá encontrado por casualidad esas croquetas por ahí tiradas?</speak-player>
+      <speak-player>Hola, ¿su hijo no se habrá encontrado por casualidad esas croquetas por ahí tiradas?</speak-player>
       <condition />
       <child nodeindex="2" />
       <speak-player>¡Así que es usted quien le ha robado las croquetas a la señora!</speak-player>
@@ -2078,8 +2078,8 @@
       <condition />
       <end-conversation />
     </dialogue-node>
-    <dialogue-node nodeindex="2" editor-x="642" editor-y="252">
-      <speak-char idTarget="Omar">¡Huy, no! Se lo he traído yo, que salen con un hambre del cole...</speak-char>
+    <dialogue-node nodeindex="2" editor-x="641" editor-y="252">
+      <speak-char idTarget="Omar">¡Huy, no! Se las he traído yo, que salen con un hambre del cole...</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
