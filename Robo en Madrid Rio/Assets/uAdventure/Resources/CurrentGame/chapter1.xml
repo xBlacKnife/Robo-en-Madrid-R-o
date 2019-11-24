@@ -1754,6 +1754,31 @@
       <character-ref idTarget="Margarita" x="921" y="730" scale="1.672423" orientation="2" layer="2" hasInfluenceArea="no" />
     </characters>
   </scene>
+  <scene id="Creditos" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Creditos.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="-4" y="-1" width="1937" height="1115" hasInfluenceArea="no" idTarget="Recursos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
+  </scene>
+  <scene id="Recursos" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Recursos.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
   <graph-conversation id="LlevaraInicio">
     <dialogue-node nodeindex="0" editor-x="281" editor-y="70">
       <speak-player>Hemos quedado en el centro comercial y ya llego tarde, debería darme prisa.</speak-player>
@@ -2607,7 +2632,7 @@
       </detailed>
     </description>
   </object>
-  <slidescene id="Malo" start="no" idTarget="SceneMenu" destinyX="-2147483648" destinyY="-2147483648" transitionTime="0" transitionType="0" next="new-scene" class="accesible" type="cutscene">
+  <slidescene id="Malo" start="no" idTarget="Creditos" destinyX="-2147483648" destinyY="-2147483648" transitionTime="0" transitionType="0" next="new-scene" class="accesible" type="cutscene">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2617,7 +2642,7 @@
     <name>
     </name>
   </slidescene>
-  <slidescene id="Bueno" start="no" idTarget="SceneMenu" destinyX="-2147483648" destinyY="-2147483648" transitionTime="0" transitionType="0" next="new-scene" class="accesible" type="cutscene">
+  <slidescene id="Bueno" start="no" idTarget="Creditos" destinyX="-2147483648" destinyY="-2147483648" transitionTime="0" transitionType="0" next="new-scene" class="accesible" type="cutscene">
     <documentation>
     </documentation>
     <resources name="No name">
